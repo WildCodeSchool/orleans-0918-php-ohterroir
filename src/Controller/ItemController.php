@@ -16,7 +16,7 @@ use Model\ItemManager;
  * Class ItemController
  *
  */
-class ItemController extends AbstractController
+class ItemController extends Controller
 {
 
 
@@ -33,7 +33,7 @@ class ItemController extends AbstractController
         $itemManager = new ItemManager($this->getPdo());
         $items = $itemManager->selectAll();
 
-        return $this->twig->render('Item/index.html.twig', ['items' => $items]);
+        return $this->twig->render('Item/home.html.twig', ['items' => $items]);
     }
 
 
