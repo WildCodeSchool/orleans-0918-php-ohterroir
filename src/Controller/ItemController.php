@@ -16,7 +16,7 @@ use Model\ItemManager;
  * Class ItemController
  *
  */
-class ItemController extends Controller
+class ItemController extends AbstractController
 {
 
 
