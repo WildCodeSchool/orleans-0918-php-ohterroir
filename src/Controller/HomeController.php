@@ -8,13 +8,10 @@
 
 namespace Controller;
 
-use Model\HomeManager;
-
-class HomeController extends Controller
+class HomeController extends AbstractController
 {
-    public function home()
+    public function show()
     {
-        $itemActive = ["home" => "active","dish" => "","grower" => ""];
-        return $this->twig->render('Home/home.html.twig', ["itemActive" => $itemActive]);
+        return $this->twig->render('Home/home.html.twig', ["home" => "active"]);
     }
 }
