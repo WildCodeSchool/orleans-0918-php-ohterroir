@@ -1,0 +1,128 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carousel section */
+.slideShow {
+    box-shadow: 10px 10px 20px #1C1C1C;
+    margin-bottom: 10px;
+}
+
+.carousel-item img {
+    max-height: 50vh;
+}
+
+h1 {
+    font-family: "Dancing Script", cursive !important;
+    font-size: 3.5rem;
+}
+@media screen and (max-width: 64em) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 50em) {
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 30em){
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+/* sentence_concept Section */
+body {
+    background-image:url(../images/low_contrast_linen_@2X.png);
+}
+
+div.container.bg {
+    padding-top: 3vh;
+    padding-bottom: 100vh;
+    background-color: white;
+    box-shadow: 1px 1px 200px black;
+}
