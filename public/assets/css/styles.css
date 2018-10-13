@@ -1,88 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Carousel */
 .slideShow {
     box-shadow: 10px 10px 20px #1C1C1C;
@@ -96,24 +11,7 @@
 /* sentence_concept Section */
 h1 {
     font-family: "Dancing Script", cursive !important;
-    font-size: 3rem;
-}
-@media screen and (max-width: 64em) {
-    h1 {
-        font-size: 2.5em;
-    }
-}
-
-@media screen and (max-width: 50em) {
-    h1 {
-        font-size: 1.8em;
-    }
-}
-
-@media screen and (max-width: 30em){
-    h1 {
-        font-size: 1.3em;
-    }
+    font-size: calc(2.8vw + 5pt);
 }
 
 body {
