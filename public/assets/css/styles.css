@@ -76,95 +76,13 @@ nav.navbar.shrink .nav-link {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
     nav.navbar .nav-link {
         padding-top: 10px !important;
         padding-bottom: 10px !important;
         border: none;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* Carousel */
 .slideShow {
@@ -179,24 +97,7 @@ nav.navbar.shrink .nav-link {
 /* sentence_concept Section */
 h1 {
     font-family: "Dancing Script", cursive !important;
-    font-size: 3rem;
-}
-@media screen and (max-width: 64em) {
-    h1 {
-        font-size: 2.5em;
-    }
-}
-
-@media screen and (max-width: 50em) {
-    h1 {
-        font-size: 1.8em;
-    }
-}
-
-@media screen and (max-width: 30em){
-    h1 {
-        font-size: 1.3em;
-    }
+    font-size: calc(2.8vw + 5pt);
 }
 
 body {
