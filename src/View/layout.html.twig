@@ -17,11 +17,11 @@
 
     <body>
 
-
-
-        {% block slide %}
-            {% include 'slideShow.html.twig' %}
+        {% block navbar %}
+            {% include 'header.html.twig' %}
         {% endblock %}
+        {% block slide %}
+        {% endblock %}  
             <div class="container bg">
                 <div class="row">
                     <div class="col">
@@ -33,13 +33,11 @@
                 {% endblock %}
             </div>
 
-
-
-
-
-
         {% block footer %}
+
         {% endblock %}
+
+
     {% block javascript %}{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
