@@ -10,8 +10,8 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-lg-5 col-sm-12">
-        <div class="card mx-auto" style="">
+    <div class="col-lg-5 col-sm-12 mx-auto mb-2">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Oh Terroir</h5>
                 <p class="card-text">{{ contactDetails.0.address }}<br/>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="col-lg-7 col-sm-12 border pr-lg-2">
+    <div class="col-lg-6 col-sm-12 border pr-lg-2 mx-auto">
         <form action="/admin/contact-details" method="post">
             <fieldset>
                 <legend>Modifier les coordonnées</legend>
@@ -32,6 +32,14 @@
                     <div class="form-group">
                         <div class="col-12 text-center alert alert-danger" role="alert">
                             {{ errors.global }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {% if validate is not empty  %}
+                    <div class="form-group">
+                        <div class="col-12 text-center alert alert-success" role="alert">
+                            {{ validate }}
                         </div>
                     </div>
                 {% endif %}

@@ -5,21 +5,47 @@ use Model\ContactDetailsManager;
 
 class ContactDetailsController extends AbstractController
 {
+    /**
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
     public function edit() : string
     {
         $resultCheckForm = ['cleanPost' => '', 'errors' => ''];
+        $validate = '';
+
         $contactDetailsManager = new ContactDetailsManager($this->getPdo());
         $contactDetails = $contactDetailsManager->selectAll();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-           $resultCheckForm = $this->checkForm($_POST);
+            $resultCheckForm = $this->checkForm($_POST);
 
+            if (count($resultCheckForm['errors']) == 0) {
+                // Hydratation class contactDetails
+                $contactDetails[0]->setAddress($resultCheckForm['cleanPost']['address']);
+                $contactDetails[0]->setZipCode($resultCheckForm['cleanPost']['zipcode']);
+                $contactDetails[0]->setCity($resultCheckForm['cleanPost']['city']);
+                $contactDetails[0]->setPhoneNumber($resultCheckForm['cleanPost']['phonenumber']);
+                $contactDetails[0]->setEmailAddress($resultCheckForm['cleanPost']['email']);
+
+                $contactDetailsManager->update($contactDetails[0]);
+                header("HTTP/1.1 303 See Other");
+                header('Location: /admin/contact-details?status=validate');
+                exit();
+            }
+        }
+
+        if (isset($_GET['status']) && $_GET['status'] === 'validate') {
+            $validate = "Vos modifications ont été enregistrées.";
         }
 
         return $this->twig->render('Admin/contactDetails.html.twig', [
             'contactDetails' => $contactDetails,
             'cleanPost' => $resultCheckForm['cleanPost'],
             'errors' => $resultCheckForm['errors'],
+            'validate' => $validate
         ]);
     }
 
@@ -29,7 +55,8 @@ class ContactDetailsController extends AbstractController
      * @param array $formValues
      * @return array
      */
-    private function checkForm(array $formValues) : array {
+    private function checkForm(array $formValues) : array
+    {
         $errors = [];
         $cleanPost = [];
 
