@@ -6,13 +6,13 @@ class Schedule
 {
     private $id;
 
-    private $opening_hour_1;
+    private $openingHour1;
 
-    private $opening_hour_2;
+    private $openingHour2;
 
-    private $weekdays_id;
+    private $weekdaysId;
 
-    private $day_name;
+    private $dayName;
 
 
     /**
@@ -38,17 +38,17 @@ class Schedule
      */
     public function getOpeningHour1() : string
     {
-        return $this->opening_hour_1;
+        return $this->openingHour1;
     }
 
 
     /**
-     * @param $opening_hour_1
+     * @param $openingHour1
      * @return Schedule
      */
-    public function setOpeningHour1($opening_hour_1) : schedule
+    public function setOpeningHour1($openingHour1) : schedule
     {
-        $this->opening_hour_1 = $opening_hour_1;
+        $this->openingHour1 = $openingHour1;
     }
 
 
@@ -57,17 +57,17 @@ class Schedule
      */
     public function getOpeningHour2() : string
     {
-        return $this->opening_hour_2;
+        return $this->openingHour2;
     }
 
 
     /**
-     * @param $opening_hour_2
+     * @param $openingHour2
      * @return Schedule
      */
-    public function setOpeningHour2($opening_hour_2) : schedule
+    public function setOpeningHour2($openingHour2) : schedule
     {
-        $this->opening_hour_2 = $opening_hour_2;
+        $this->openingHour2 = $openingHour2;
     }
 
 
@@ -76,17 +76,17 @@ class Schedule
      */
     public function getWeekdaysId() : int
     {
-        return $this->weekdays_id;
+        return $this->weekdaysId;
     }
 
 
     /**
-     * @param $weekdays_id
+     * @param $weekdaysId
      * @return Schedule
      */
-    public function setWeekdaysId($weekdays_id) : schedule
+    public function setWeekdaysId($weekdaysId) : schedule
     {
-        $this->weekdays_id = $weekdays_id;
+        $this->weekdaysId = $weekdaysId;
     }
 
 
@@ -95,16 +95,16 @@ class Schedule
      */
     public function getDayName() : string
     {
-        return $this->day_name;
+        return $this->dayName;
     }
 
 
     /**
-     * @param $day_name
+     * @param $dayName
      * @return Schedule
      */
-    public function setDayName($day_name) : schedule
+    public function setDayName($dayName) : schedule
     {
-        $this->day_name = $day_name;
+        $this->dayName = $dayName;
     }
 }

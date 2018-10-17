@@ -27,7 +27,7 @@ class ScheduleManager extends AbstractManager
     public function selectSchedule() : array
     {
         return $this->pdo->query(
-            'SELECT * FROM ' . $this->table . ' INNER JOIN weekdays ON weekdays.id = schedule.weekdays_id',
+            'SELECT * FROM ' . $this->table . ' INNER JOIN weekdays ON weekdays.id = schedule.weekdaysid',
             \PDO::FETCH_CLASS,
             $this->className
         )

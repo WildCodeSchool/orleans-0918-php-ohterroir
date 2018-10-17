@@ -26,11 +26,11 @@ DROP TABLE IF EXISTS `schedule`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `opening_hour_1` varchar(5) NOT NULL,
-  `opening_hour_2` varchar(5) NOT NULL,
-  `weekdays_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`weekdays_id`),
-  KEY `fk_opening_time_weekdays_idx` (`weekdays_id`)
+  `openingHour1` varchar(5) NOT NULL,
+  `openingHour2` varchar(5) NOT NULL,
+  `weekdaysId` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`weekdaysId`),
+  KEY `fk_opening_time_weekdays_idx` (`weekdaysId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-17 14:40:27
+-- Dump completed on 2018-10-17 17:45:41
