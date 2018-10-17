@@ -110,3 +110,19 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* dishes section */
+.dishes_concept {
+    font-size: calc(0.77vw + 6pt);
+    color: black;
+    line-height: 1;
+}
+
+.concept_food {
+    padding-bottom: 1em;
+}
+
+.concept {
+    color: #7fb401;
+    font-weight: bold;
+}
