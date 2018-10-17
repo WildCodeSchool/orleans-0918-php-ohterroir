@@ -4,6 +4,8 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    background-image:url(../images/low_contrast_linen_@2X.png);
+    padding-top: calc(1vh + 48pt);
 }
 
 section header {
@@ -29,7 +31,7 @@ nav.navbar {
 nav.navbar .nav-link {
     color: #FFFFFF;
     letter-spacing: 0.08rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     padding-top: 25px;
     padding-bottom: 25px;
     border-top: 2px solid transparent;
@@ -76,9 +78,35 @@ nav.navbar.shrink .nav-link {
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
     nav.navbar .nav-link {
         padding-top: 10px !important;
         padding-bottom: 10px !important;
         border: none;
     }
+
+}
+
+/* Carousel */
+.slideShow {
+    box-shadow: 10px 10px 20px #1C1C1C;
+    margin-bottom: 1em;
+}
+
+.carousel-item img {
+    max-height: 50vh;
+}
+
+/* sentence_concept Section */
+h1 {
+    font-family: "Dancing Script", cursive !important;
+    font-size: calc(2.6vw + 6pt);
+    padding-bottom: 1em;
+}
+
+div.container.bg {
+    padding-top: 3vh;
+    background-color: white;
+    box-shadow: 1px 1px 200px black;
+    background-image:url(../images/paper.png);
 }
