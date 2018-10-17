@@ -2,12 +2,14 @@
 
 namespace Controller;
 
+use Model\ContactDetailsManager;
+
 class HomeController extends AbstractController
 {
     public function show()
     {
-        $contactDetailsController = new ContactDetailsController();
-        $contacts = $contactDetailsController->show();
+        $contactManager = new ContactDetailsManager($this->getPdo());
+        $contacts = $contactManager->selectAll();
 
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",

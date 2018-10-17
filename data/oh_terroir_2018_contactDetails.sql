@@ -27,10 +27,10 @@ DROP TABLE IF EXISTS `contactDetails`;
 CREATE TABLE `contactDetails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `address` varchar(255) NOT NULL,
-  `zip_code` varchar(5) NOT NULL,
+  `zipCode` varchar(5) NOT NULL,
   `city` varchar(80) NOT NULL,
-  `phone_number` varchar(10) NOT NULL,
-  `email_address` varchar(255) NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
+  `emailAddress` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Table contact_details';
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-17  8:58:08
+-- Dump completed on 2018-10-17 16:06:43
