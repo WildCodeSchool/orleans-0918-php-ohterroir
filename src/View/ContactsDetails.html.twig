@@ -21,6 +21,23 @@
                     <img class="img-fluid" src="/assets/images/label_AB.jpg" alt="label bio">
                 </div>
                 <div class="col-lg-4 align-self-center">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                        <tr>
+                            {% for i in 0..schedules|length - 1 %}
+                            {% if schedules[i].dayname == schedules[i+1].dayname %}
+                            <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }} -- {{ schedules[i+1].openinghour1 }} - {{ schedules[i+1].openinghour2 }}</td>
+                            {% set i = i+2 %}
+                            {% elseif schedules[i].weekdaysid > schedules[i+1].weekdaysid %}
+                        <tr>
+                            <td>{{ schedules[i-1].dayname }} : {{ schedules[i-1].openinghour1 }} - {{ schedules[i-1].openinghour2 }}</td>
+                        </tr>
+                            <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }}</td>
+                            {% endif %}
+                        </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 {% endblock %}
