@@ -27,34 +27,55 @@
         <form action="/admin/contact-details" method="post">
             <fieldset>
                 <legend>Modifier les coordonnées</legend>
+
+                {% if errors.global is defined  %}
+                    <div class="form-group">
+                        <div class="col-12 text-center alert alert-danger" role="alert">
+                            {{ errors.global }}
+                        </div>
+                    </div>
+                {% endif %}
+
                 <div class="form-group row">
                     <label for="address" class="col-sm-3 col-form-label">Adresse</label>
                     <div class="col-sm-9">
-                        <input type="text" id="address" name="address" value="{{ contactDetails.0.address }}" maxlength="255" placeholder="ex: 1 rue de Jeanne D'arc">
+                        <input type="text" id="address" name="address" value="{{ cleanPost.address ?? contactDetails.0.address }}" maxlength="255" placeholder="ex: 1 rue de Jeanne D'arc">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="zipcode" class="col-sm-3 col-form-label">Code postal</label>
                     <div class="col-sm-9">
-                        <input type="text" id="zipcode" name="zipcode" value="{{ contactDetails.0.zipCode }}" maxlength="5" placeholder="ex: 45000">
+                        <input type="text" id="zipcode" name="zipcode" value="{{ cleanPost.zipcode ?? contactDetails.0.zipCode }}" maxlength="5" placeholder="ex: 45000">
+                        {% if errors.zipcode is defined %}
+                            <p class="text-danger my-0" >{{ errors.zipcode }}</p>
+                        {%  endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="city" class="col-sm-3 col-form-label">Ville</label>
                     <div class="col-sm-9">
-                        <input type="text" id="city" name="city" value="{{ contactDetails.0.city }}" maxlength="80" placeholder="ex: Orléans">
+                        <input type="text" id="city" name="city" value="{{ cleanPost.city ?? contactDetails.0.city }}" maxlength="80" placeholder="ex: Orléans">
+                        {% if errors.city is defined %}
+                            <p class="text-danger my-0" >{{ errors.city }}</p>
+                        {%  endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="phonenumber" class="col-sm-3 col-form-label">Téléphone</label>
                     <div class="col-sm-9">
-                        <input type="tel" id="phonenumber" name="phonenumber" value="{{ contactDetails.0.phoneNumber }}" maxlength="10" placeholder="ex: 0238252525">
+                        <input type="tel" id="phonenumber" name="phonenumber" value="{{ cleanPost.phonenumber ?? contactDetails.0.phoneNumber }}" maxlength="10" placeholder="ex: 0238252525">
+                        {% if errors.phonenumber is defined %}
+                            <p class="text-danger my-0" >{{ errors.phonenumber }}</p>
+                        {%  endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-sm-3 col-form-label">Adresse email</label>
                     <div class="col-sm-9">
-                        <input type="email" id="email" name="email" value="{{ contactDetails.0.emailAddress }}" maxlength="255" placeholder="ex: contact@wanadoo.fr">
+                        <input type="email" id="email" name="email" value="{{ cleanPost.email ?? contactDetails.0.emailAddress }}" maxlength="255" placeholder="ex: contact@wanadoo.fr">
+                        {% if errors.email is defined %}
+                            <p class="text-danger my-0" >{{ errors.email }}</p>
+                        {%  endif %}
                     </div>
                 </div>
                 <div class="form-group">
