@@ -2,7 +2,6 @@
 
 namespace Model;
 
-
 class Schedule
 {
     private $id;
@@ -108,6 +107,4 @@ class Schedule
     {
         $this->day_name = $day_name;
     }
-
-
 }

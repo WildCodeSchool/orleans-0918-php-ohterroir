@@ -24,6 +24,4 @@ class ScheduleController extends AbstractController
 
         return $schedules;
     }
-
 }
-
