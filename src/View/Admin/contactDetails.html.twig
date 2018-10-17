@@ -22,5 +22,48 @@
             </div>
         </div>
     </div>
+
+    <div class="col-lg-7 col-sm-12 border pr-lg-2">
+        <form action="/admin/contact-details" method="post">
+            <fieldset>
+                <legend>Modifier les coordonnées</legend>
+                <div class="form-group row">
+                    <label for="address" class="col-sm-3 col-form-label">Adresse</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="address" name="address" value="{{ contactDetails.0.address }}" maxlength="255" placeholder="ex: 1 rue de Jeanne D'arc">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="zipcode" class="col-sm-3 col-form-label">Code postal</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="zipcode" name="zipcode" value="{{ contactDetails.0.zipCode }}" maxlength="5" placeholder="ex: 45000">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="city" class="col-sm-3 col-form-label">Ville</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="city" name="city" value="{{ contactDetails.0.city }}" maxlength="80" placeholder="ex: Orléans">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phonenumber" class="col-sm-3 col-form-label">Téléphone</label>
+                    <div class="col-sm-9">
+                        <input type="tel" id="phonenumber" name="phonenumber" value="{{ contactDetails.0.phoneNumber }}" maxlength="10" placeholder="ex: 0238252525">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Adresse email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" name="email" value="{{ contactDetails.0.emailAddress }}" maxlength="255" placeholder="ex: contact@wanadoo.fr">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-dark">Sauvegarder</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </div>
 {% endblock %}
