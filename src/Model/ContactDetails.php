@@ -12,13 +12,13 @@ class ContactDetails
 
     private $address;
 
-    private $zip_code;
+    private $zipCode;
 
     private $city;
 
-    private $phone_number;
+    private $phoneNumber;
 
-    private $email_address;
+    private $emailAddress;
 
     /**
      * @return int
@@ -59,16 +59,16 @@ class ContactDetails
      */
     public function getZipCode() : string
     {
-        return $this->zip_code;
+        return $this->zipCode;
     }
 
     /**
      * @param $zip_code
      * @return contactDetails
      */
-    public function setZipCode($zip_code) : contactDetails
+    public function setZipCode($zipCode) : contactDetails
     {
-        $this->zip_code = $zip_code;
+        $this->zipCode = $zipCode;
     }
 
     /**
@@ -93,16 +93,16 @@ class ContactDetails
      */
     public function getPhoneNumber() : string
     {
-        return $this->phone_number;
+        return $this->phoneNumber;
     }
 
     /**
      * @param $phone_number
      * @return contactDetails
      */
-    public function setPhoneNumber($phone_number) : contactDetails
+    public function setPhoneNumber($phoneNumber) : contactDetails
     {
-        $this->phone_number = $phone_number;
+        $this->phoneNumber = $phoneNumber;
     }
 
     /**
@@ -110,15 +110,15 @@ class ContactDetails
      */
     public function getEmailAddress() : string
     {
-        return $this->email_address;
+        return $this->emailAddress;
     }
 
     /**
      * @param $email_address
      * @return contactDetails
      */
-    public function setEmailAddress($email_address) : contactDetails
+    public function setEmailAddress($emailAddress) : contactDetails
     {
-        $this->email_address = $email_address;
+        $this->emailAddress = $emailAddress;
     }
 }

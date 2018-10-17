@@ -14,5 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    {% include 'ContactsDetails.html.twig' %}
+        {% block contact %}
+             {% include 'ContactsDetails.html.twig' %}
+        {% endblock %}
 {% endblock %}
