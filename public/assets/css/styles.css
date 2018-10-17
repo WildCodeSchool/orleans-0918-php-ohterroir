@@ -110,3 +110,8 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* back-end */
+.container-admin {
+    background-color: #FFF;
+}

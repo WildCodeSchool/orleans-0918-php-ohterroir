@@ -16,4 +16,7 @@ $routes = [
     'HomeAdmin' => [
         ['show', '/admin', 'GET'],
     ],
+    'ContactDetails' => [
+        ['edit', '/admin/contact-details', 'GET'],
+    ],
 ];
