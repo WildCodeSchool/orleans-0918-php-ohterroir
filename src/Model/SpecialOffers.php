@@ -2,6 +2,10 @@
 
 namespace Model;
 
+/**
+ * Class SpecialOffers
+ * @package Model
+ */
 class SpecialOffers
 {
     /** @var int */
@@ -22,6 +26,8 @@ class SpecialOffers
     /** @var int */
     private $noLimitTimeOffer;
 
+    /** @var string */
+    private $imgLink;
 
     /**
      * @return int
@@ -133,5 +139,24 @@ class SpecialOffers
     public function setNoLimitTimeOffer(int $noLimitTimeOffer) : SpecialOffers
     {
         $this->noLimitTimeOffer = $noLimitTimeOffer;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getImgLink(): string
+    {
+        return $this->imgLink;
+    }
+
+
+    /**
+     * @param string $imgLink
+     * @return SpecialOffers
+     */
+    public function setImgLink(string $imgLink) : SpecialOffers
+    {
+        $this->imgLink = $imgLink;
     }
 }
