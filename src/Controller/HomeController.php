@@ -14,7 +14,7 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",
-            "specialOffers" => $specialOffers,
+            "specialoffers" => $specialOffers,
         ]);
     }
 }

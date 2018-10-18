@@ -4,79 +4,96 @@ namespace Model;
 
 class SpecialOffers
 {
-
+    /** @var int */
     private $id;
 
+    /** @var string */
     private $name;
 
+    /** @var string */
     private $description;
 
+    /** @var string */
     private $startDate;
 
+    /** @var string */
     private $finishDate;
 
+    /** @var int */
     private $noLimitTimeOffer;
 
+
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getId() : int
     {
         return $this->id;
     }
 
+
     /**
-     * @param mixed $id
+     * @param int $id
+     * @return SpecialOffers
      */
-    public function setId($id)
+    public function setId(int $id) : SpecialOffers
     {
         $this->id = $id;
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
+
     /**
-     * @param mixed $name
+     * @param string $name
+     * @return SpecialOffers
      */
-    public function setName($name)
+    public function setName(string $name) : SpecialOffers
     {
         $this->name = $name;
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }
 
+
     /**
-     * @param mixed $description
+     * @param string $description
+     * @return SpecialOffers
      */
-    public function setDescription($description)
+    public function setDescription(string $description) : SpecialOffers
     {
         $this->description = $description;
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
-    public function getStartDate()
+    public function getStartDate() : string
     {
         return $this->startDate;
     }
 
+
     /**
-     * @param mixed $startDate
+     * @param string $startDate
+     * @return SpecialOffers
      */
-    public function setStartDate($startDate)
+    public function setStartDate(string $startDate) : SpecialOffers
     {
         $this->startDate = $startDate;
     }
@@ -84,31 +101,36 @@ class SpecialOffers
     /**
      * @return mixed
      */
-    public function getFinishDate()
+    public function getFinishDate() : string
     {
         return $this->finishDate;
     }
 
+
     /**
-     * @param mixed $finishDate
+     * @param string $finishDate
+     * @return SpecialOffers
      */
-    public function setFinishDate($finishDate)
+    public function setFinishDate(string $finishDate) : SpecialOffers
     {
         $this->finishDate = $finishDate;
     }
 
+
     /**
-     * @return mixed
+     * @return int
      */
-    public function getNoLimitTimeOffer()
+    public function getNoLimitTimeOffer() : int
     {
         return $this->noLimitTimeOffer;
     }
 
+
     /**
-     * @param mixed $noLimitTimeOffer
+     * @param int $noLimitTimeOffer
+     * @return SpecialOffers
      */
-    public function setNoLimitTimeOffer($noLimitTimeOffer)
+    public function setNoLimitTimeOffer(int $noLimitTimeOffer) : SpecialOffers
     {
         $this->noLimitTimeOffer = $noLimitTimeOffer;
     }
