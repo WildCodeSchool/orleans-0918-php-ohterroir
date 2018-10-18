@@ -8,17 +8,24 @@ namespace Model;
  */
 class ContactDetails
 {
+    /** @var int */
     private $id;
 
+    /** @var string */
     private $address;
 
+    /** @var string */
     private $zipCode;
 
+    /** @var string */
     private $city;
 
+    /** @var string */
     private $phoneNumber;
 
+    /** @var string */
     private $emailAddress;
+
 
     /**
      * @return int
@@ -28,14 +35,16 @@ class ContactDetails
         return $this->id;
     }
 
+
     /**
-     * @param $id
-     * @return contactDetails
+     * @param int $id
+     * @return ContactDetails
      */
-    public function setId($id) : contactDetails
+    public function setId(int $id) : contactDetails
     {
         $this->id = $id;
     }
+
 
     /**
      * @return string
@@ -45,14 +54,16 @@ class ContactDetails
         return $this->address;
     }
 
+
     /**
-     * @param $address
-     * @return contactDetails
+     * @param string $address
+     * @return ContactDetails
      */
-    public function setAddress($address) : contactDetails
+    public function setAddress(string $address) : contactDetails
     {
         $this->address = $address;
     }
+
 
     /**
      * @return string
@@ -62,14 +73,16 @@ class ContactDetails
         return $this->zipCode;
     }
 
+
     /**
-     * @param $zip_code
-     * @return contactDetails
+     * @param string $zipCode
+     * @return ContactDetails
      */
-    public function setZipCode($zipCode) : contactDetails
+    public function setZipCode(string $zipCode) : contactDetails
     {
         $this->zipCode = $zipCode;
     }
+
 
     /**
      * @return string
@@ -79,14 +92,16 @@ class ContactDetails
         return $this->city;
     }
 
+
     /**
-     * @param $city
-     * @return contactDetails
+     * @param string $city
+     * @return ContactDetails
      */
-    public function setCity($city) : contactDetails
+    public function setCity(string $city) : contactDetails
     {
         $this->city = $city;
     }
+
 
     /**
      * @return string
@@ -96,14 +111,16 @@ class ContactDetails
         return $this->phoneNumber;
     }
 
+
     /**
-     * @param $phone_number
-     * @return contactDetails
+     * @param string $phoneNumber
+     * @return ContactDetails
      */
-    public function setPhoneNumber($phoneNumber) : contactDetails
+    public function setPhoneNumber(string $phoneNumber) : contactDetails
     {
         $this->phoneNumber = $phoneNumber;
     }
+
 
     /**
      * @return string
@@ -114,10 +131,10 @@ class ContactDetails
     }
 
     /**
-     * @param $email_address
-     * @return contactDetails
+     * @param string $emailAddress
+     * @return ContactDetails
      */
-    public function setEmailAddress($emailAddress) : contactDetails
+    public function setEmailAddress(string $emailAddress) : contactDetails
     {
         $this->emailAddress = $emailAddress;
     }
