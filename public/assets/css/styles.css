@@ -110,3 +110,33 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* footer */
+footer {
+    background-color: #222222;
+}
+footer li{
+    list-style-type: none;
+}
+footer #pages li{
+    margin-bottom: 30px;
+}
+footer li a {
+    font-family: "PT Serif", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+footer li a::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #7fb401;
+}
+footer li a:hover {
+    text-decoration: none;
+    color: #7fb401;
+}
