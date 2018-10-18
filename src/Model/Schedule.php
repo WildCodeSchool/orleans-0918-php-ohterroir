@@ -4,14 +4,30 @@ namespace Model;
 
 class Schedule
 {
+
+    /**
+     * @var int
+     */
     private $id;
 
+    /**
+     * @var string
+     */
     private $openingHour1;
 
+    /**
+     * @var string
+     */
     private $openingHour2;
 
+    /**
+     * @var int
+     */
     private $weekdaysId;
 
+    /**
+     * @var string
+     */
     private $dayName;
 
 
@@ -25,16 +41,17 @@ class Schedule
 
 
     /**
-     * @param $id
+     * @param int $id
      * @return Schedule
      */
-    public function setId($id) : schedule
+    public function setId(int $id) : Schedule
     {
         $this->id = $id;
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
     public function getOpeningHour1() : string
     {
@@ -43,10 +60,10 @@ class Schedule
 
 
     /**
-     * @param $openingHour1
+     * @param string $openingHour1
      * @return Schedule
      */
-    public function setOpeningHour1($openingHour1) : schedule
+    public function setOpeningHour1(string $openingHour1) : Schedule
     {
         $this->openingHour1 = $openingHour1;
     }
@@ -62,10 +79,10 @@ class Schedule
 
 
     /**
-     * @param $openingHour2
+     * @param string $openingHour2
      * @return Schedule
      */
-    public function setOpeningHour2($openingHour2) : schedule
+    public function setOpeningHour2(string $openingHour2) : Schedule
     {
         $this->openingHour2 = $openingHour2;
     }
@@ -81,10 +98,10 @@ class Schedule
 
 
     /**
-     * @param $weekdaysId
+     * @param int $weekdaysId
      * @return Schedule
      */
-    public function setWeekdaysId($weekdaysId) : schedule
+    public function setWeekdaysId(int $weekdaysId) : Schedule
     {
         $this->weekdaysId = $weekdaysId;
     }
@@ -100,10 +117,10 @@ class Schedule
 
 
     /**
-     * @param $dayName
+     * @param string $dayName
      * @return Schedule
      */
-    public function setDayName($dayName) : schedule
+    public function setDayName(string $dayName) : Schedule
     {
         $this->dayName = $dayName;
     }
