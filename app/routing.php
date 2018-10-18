@@ -17,6 +17,6 @@ $routes = [
         ['show', '/admin', 'GET'],
     ],
     'ContactDetails' => [
-        ['edit', '/admin/contact-details', ['GET','POST']],
+        ['edit', '/admin/contact-details/edit/{id:\d+}', ['GET','POST']],
     ],
 ];

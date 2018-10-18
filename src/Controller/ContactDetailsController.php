@@ -11,28 +11,28 @@ class ContactDetailsController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
-    public function edit() : string
+    public function edit(int $id) : string
     {
         $resultCheckForm = ['cleanPost' => '', 'errors' => ''];
         $validate = '';
 
         $contactDetailsManager = new ContactDetailsManager($this->getPdo());
-        $contactDetails = $contactDetailsManager->selectAll();
+        $contactDetails = $contactDetailsManager->selectOneById($id);
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $resultCheckForm = $this->checkForm($_POST);
 
             if (count($resultCheckForm['errors']) == 0) {
                 // Hydratation class contactDetails
-                $contactDetails[0]->setAddress($resultCheckForm['cleanPost']['address']);
-                $contactDetails[0]->setZipCode($resultCheckForm['cleanPost']['zipcode']);
-                $contactDetails[0]->setCity($resultCheckForm['cleanPost']['city']);
-                $contactDetails[0]->setPhoneNumber($resultCheckForm['cleanPost']['phonenumber']);
-                $contactDetails[0]->setEmailAddress($resultCheckForm['cleanPost']['email']);
+                $contactDetails->setAddress($resultCheckForm['cleanPost']['address']);
+                $contactDetails->setZipCode($resultCheckForm['cleanPost']['zipcode']);
+                $contactDetails->setCity($resultCheckForm['cleanPost']['city']);
+                $contactDetails->setPhoneNumber($resultCheckForm['cleanPost']['phonenumber']);
+                $contactDetails->setEmailAddress($resultCheckForm['cleanPost']['email']);
 
-                $contactDetailsManager->update($contactDetails[0]);
+                $contactDetailsManager->update($contactDetails);
                 header("HTTP/1.1 303 See Other");
-                header('Location: /admin/contact-details?status=validate');
+                header('Location: /admin/contact-details/edit/'.intval($_POST['id']).'?status=validate');
                 exit();
             }
         }
