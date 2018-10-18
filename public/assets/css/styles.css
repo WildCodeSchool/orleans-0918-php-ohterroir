@@ -110,3 +110,15 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* contact_details section */
+
+.contact_details{
+    background-color: #7fb401;
+    color: #ffffff;
+    padding-top: 0.5em;
+}
+
+.contact_details .col-lg-4{
+    padding-bottom: 0.5em;
+}
