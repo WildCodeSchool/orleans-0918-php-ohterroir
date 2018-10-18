@@ -135,4 +135,14 @@ hr {border:1px dashed #7fb401;width:50%;}
         transform: skewX(0deg);
         width:100%;
     }
+
+/* contact_details section */
+.contact_details{
+    background-color: #7fb401;
+    color: #ffffff;
+    padding-top: 0.5em;
+}
+
+.contact_details .col-lg-4{
+    padding-bottom: 0.5em;
 }
