@@ -31,6 +31,7 @@ CREATE TABLE `specialOffers` (
   `startDate` date DEFAULT NULL,
   `finishDate` date DEFAULT NULL,
   `noLimitTimeOffer` tinyint(1) DEFAULT NULL,
+  `imgLink` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,7 +42,7 @@ CREATE TABLE `specialOffers` (
 
 LOCK TABLES `specialOffers` WRITE;
 /*!40000 ALTER TABLE `specialOffers` DISABLE KEYS */;
-INSERT INTO `specialOffers` VALUES (1,'Offre Cinéma','Un dessert offert (hors gourmandise) sur présentation de votre place de cinéma','2018-10-17','2018-12-31',0),(2,'Offre Etudiant','Un dessert offert (hors gourmandise) sur présentation de votre carte étudiante',NULL,NULL,1),(3,'Offre Essai','Un dessert offert (hors gourmandise) sur présentation de votre essai',NULL,NULL,1),(5,'Offre Essai2','Un dessert offert (hors gourmandise) sur présentation de votre essai2',NULL,NULL,1);
+INSERT INTO `specialOffers` VALUES (1,'Offre Cinéma','Un dessert offert (hors gourmandise) sur présentation de votre place de cinéma','2018-10-17','2018-12-31',0,'/assets/images/ticket.png'),(2,'Offre Etudiant','Un dessert offert (hors gourmandise) sur présentation de votre carte étudiante',NULL,NULL,1,'/assets/images/id-card.png');
 /*!40000 ALTER TABLE `specialOffers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-18  9:49:16
+-- Dump completed on 2018-10-18 14:03:39
