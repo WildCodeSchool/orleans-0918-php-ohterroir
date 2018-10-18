@@ -110,3 +110,9 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* special_offers section */
+
+.special_offers p{
+    font-size: 1.2em;
+}
