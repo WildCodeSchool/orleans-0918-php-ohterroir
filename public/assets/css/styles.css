@@ -111,8 +111,32 @@ div.container.bg {
     background-image:url(../images/paper.png);
 }
 
-/* contact_details section */
+hr {border:1px dashed #7fb401;width:50%;}
 
+/* Banner grower */
+.banner-grower {
+    background-image: url("../images/produits-bio-produits-locaux.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.banner-grower p {
+    font-size: calc(0.3vw + 13pt);
+    width:50%;
+    background-image:url("../images/paper.png");
+    transform: skewX(-15deg);
+}
+
+@media (max-width: 760px) {
+    .banner-grower {
+        padding-bottom: calc(1vh + 30%);
+    }
+    .banner-grower > p {
+        transform: skewX(0deg);
+        width:100%;
+    }
+
+/* contact_details section */
 .contact_details{
     background-color: #7fb401;
     color: #ffffff;
