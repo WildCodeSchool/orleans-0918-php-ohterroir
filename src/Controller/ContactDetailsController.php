@@ -14,7 +14,7 @@ class ContactDetailsController extends AbstractController
     public function edit(int $id) : string
     {
         $resultCheckForm = ['cleanPost' => '', 'errors' => ''];
-        $validate = '';
+        $validateForm = '';
 
         $contactDetailsManager = new ContactDetailsManager($this->getPdo());
         $contactDetails = $contactDetailsManager->selectOneById($id);
@@ -45,7 +45,7 @@ class ContactDetailsController extends AbstractController
             'contactDetails' => $contactDetails,
             'cleanPost' => $resultCheckForm['cleanPost'],
             'errors' => $resultCheckForm['errors'],
-            'validate' => $validate
+            'validateForm' => $validateForm
         ]);
     }
 
