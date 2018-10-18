@@ -38,7 +38,7 @@ class ContactDetailsController extends AbstractController
         }
 
         if (isset($_GET['status']) && $_GET['status'] === 'validate') {
-            $validate = "Vos modifications ont été enregistrées.";
+            $validateForm = "Vos modifications ont été enregistrées.";
         }
 
         return $this->twig->render('Admin/contactDetails.html.twig', [
