@@ -66,12 +66,16 @@ class ContactDetailsController extends AbstractController
 
         if (!empty($cleanPost['address']) && !empty($cleanPost['zipcode']) && !empty($cleanPost['city'])
             && !empty($cleanPost['phonenumber']) && !empty($cleanPost['email'])) {
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]]+/iu", $cleanPost['address'])) {
+                $errors["address"] = 'Les caractères spéciaux ne sont pas autorisées.';
+            }
+
             if (!preg_match("/\b[0-9]{5}\b/", $cleanPost['zipcode'])) {
                 $errors["zipcode"] = 'Le code postal doit contenir 5 chiffres.';
             }
 
-            if (!preg_match_all("/\b[a-zA-Z àáâãäåçèéêëìíîïðòóôõöùúûüýÿ'-]+\b/iu", $cleanPost['city'])) {
-                $errors["city"] = 'La ville ne doit pas contenir de chiffres.';
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]0-9]+/iu", $cleanPost['city'])) {
+                $errors["city"] = 'Les caractères spéciaux et les chiffres ne sont pas autorisées.';
             }
 
             if (!preg_match("/\b[0-9]{10}\b/", $cleanPost['phonenumber'])) {

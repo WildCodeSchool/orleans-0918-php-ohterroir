@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-lg-6 col-sm-12 border pr-lg-2 mx-auto">
-        <form method="post">
+        <form action="/admin/contact-details/edit/{{ contactDetails.id }}" method="post">
             <input type="hidden" name="id" value="{{ contactDetails.id }}" />
             <fieldset>
                 <legend>Modifier les coordonnées</legend>
@@ -49,6 +49,9 @@
                     <label for="address" class="col-sm-3 col-form-label">Adresse</label>
                     <div class="col-sm-9">
                         <input type="text" id="address" name="address" value="{{ cleanPost.address ?? contactDetails.address }}" maxlength="255" placeholder="ex: 1 rue de Jeanne D'arc">
+                        {% if errors.address is defined %}
+                            <p class="text-danger my-0" >{{ errors.address }}</p>
+                        {%  endif %}
                     </div>
                 </div>
                 <div class="form-group row">
