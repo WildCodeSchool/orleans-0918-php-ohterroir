@@ -111,6 +111,23 @@ div.container.bg {
     background-image:url(../images/paper.png);
 }
 
+
+/* dishes section */
+.dishes_concept {
+    font-size: calc(0.77vw + 6pt);
+    color: black;
+    line-height: 1;
+}
+
+.concept_food {
+    padding-bottom: 1em;
+}
+
+.concept {
+    color: #7fb401;
+    font-weight: bold;
+}
+
 hr {border:1px dashed #7fb401;width:50%;}
 
 /* Banner grower */
