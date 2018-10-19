@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\ContactDetailsManager;
+use Model\ScheduleManager;
 use Model\DishCategoriesManager;
 
 class HomeController extends AbstractController
@@ -11,6 +12,9 @@ class HomeController extends AbstractController
     {
         $contactManager = new ContactDetailsManager($this->getPdo());
         $contacts = $contactManager->selectAll();
+      
+        $scheduleManager = new ScheduleManager($this->getPdo());
+        $schedules = $scheduleManager->selectSchedule();
 
         $dishCategoriesManager = new DishCategoriesManager($this->getPdo());
         $dishCategories = $dishCategoriesManager->selectAllDishCategoriesIsActive();
@@ -18,7 +22,8 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",
             "contacts" => $contacts,
-            "dishCategories" => $dishCategories,
+            "schedules" => $schedules,
+            "dishCategories" => $dishCategories,          
         ]);
     }
 }
