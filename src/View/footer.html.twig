@@ -2,6 +2,9 @@
     <div id="pages">
         <div class="row">
             <div class="col">
+                <img src="/assets/images/terrasse_footer.jpg" />
+            </div>
+            <div class="col">
                 <ul>
                     <li><a href="" >PLATS & DESSERTS</a></li>
                     <li><a href="" >PARTENAIRES</a></li>
@@ -10,4 +13,43 @@
             </div>
         </div>
     </div>
+    <div id="coordonnees">
+        <div class="row">
+            <div class="col text-center">
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                    {% for contact in contacts %}
+                        <tr>
+                            <td>Adresse : {{ contact.address }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ contact.zipcode }} - {{ contact.city }}</td>
+                        </tr>
+                        <tr>
+                            <td>Téléphone : {{ contact.phonenumber }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col text-center">
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                    <tr>
+                        {% for i in 0..schedules|length - 1 %}
+                        {% if schedules[i].dayname == schedules[i+1].dayname %}
+                        <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }} -- {{ schedules[i+1].openinghour1 }} - {{ schedules[i+1].openinghour2 }}</td>
+                        {% set i = i+2 %}
+                        {% elseif schedules[i].weekdaysid > schedules[i+1].weekdaysid %}
+                    <tr>
+                        <td>{{ schedules[i-1].dayname }} : {{ schedules[i-1].openinghour1 }} - {{ schedules[i-1].openinghour2 }}</td>
+                    </tr>
+                    <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }}</td>
+                    {% endif %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
 </footer>
