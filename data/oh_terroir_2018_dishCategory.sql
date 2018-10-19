@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `dishCategories`
+-- Table structure for table `dishCategory`
 --
 
-DROP TABLE IF EXISTS `dishCategories`;
+DROP TABLE IF EXISTS `dishCategory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dishCategories` (
+CREATE TABLE `dishCategory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `namePageHome` varchar(45) NOT NULL,
   `namePageDish` varchar(125) NOT NULL,
@@ -36,13 +36,13 @@ CREATE TABLE `dishCategories` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `dishCategories`
+-- Dumping data for table `dishCategory`
 --
 
-LOCK TABLES `dishCategories` WRITE;
-/*!40000 ALTER TABLE `dishCategories` DISABLE KEYS */;
-INSERT INTO `dishCategories` VALUES (1,'BURGERS','Nos Burgers','Pain Bio, fromage cantal AOP, Salade de Roquette, Sauces fabriquées par un chef étoilé, frites à base de pommes de terre Bio locales.','Nos viandes de boeuf locale et bio, de race Aberdeen Angus. Nos pommes de terre à frites sont locales et bio. Toutes nos sauces à burges sont cenfectionnées par un chef étoilé.','/assets/images/categories/1.jpg',NULL,1),(2,'PLATS CHAUDS','Nos plats chauds','Pâtes fermières locales, petit épeautre bio local en risotto, Quinoa bio, Lentilles bio locales...','Pâtes fabriquées à base de crème fraîche bio, Sauce tomate fabriquée au coeur de la provence etc...','/assets/images/categories/2.jpg',NULL,1),(3,'SALADES','Nos salades maison','Salades fraîches maison','Nos salades composées sont préparées uniquement au moment de la commande devant vous.','/assets/images/categories/3.jpg',NULL,1),(4,'DESSERTS','Nos desserts','Faisselle bio, riz au lait, pot de glace ...','La compote bio fabriquée à Amilly, ou encore la faiselle bio de la Ferme des Grands Champs à Lorris , et bien d’autres desserts','/assets/images/categories/4.jpg',NULL,1);
-/*!40000 ALTER TABLE `dishCategories` ENABLE KEYS */;
+LOCK TABLES `dishCategory` WRITE;
+/*!40000 ALTER TABLE `dishCategory` DISABLE KEYS */;
+INSERT INTO `dishCategory` VALUES (1,'BURGERS','Nos Burgers','Pain Bio, fromage cantal AOP, Salade de Roquette, Sauces fabriquées par un chef étoilé, frites à base de pommes de terre Bio locales.','Nos viandes de boeuf locale et bio, de race Aberdeen Angus. Nos pommes de terre à frites sont locales et bio. Toutes nos sauces à burges sont cenfectionnées par un chef étoilé.','/assets/images/categories/1.jpg',NULL,1),(2,'PLATS CHAUDS','Nos plats chauds','Pâtes fermières locales, petit épeautre bio local en risotto, Quinoa bio, Lentilles bio locales...','Pâtes fabriquées à base de crème fraîche bio, Sauce tomate fabriquée au coeur de la provence etc...','/assets/images/categories/2.jpg',NULL,1),(3,'SALADES','Nos salades maison','Salades fraîches maison','Nos salades composées sont préparées uniquement au moment de la commande devant vous.','/assets/images/categories/3.jpg',NULL,1),(4,'DESSERTS','Nos desserts','Faisselle bio, riz au lait, pot de glace ...','La compote bio fabriquée à Amilly, ou encore la faiselle bio de la Ferme des Grands Champs à Lorris , et bien d’autres desserts','/assets/images/categories/4.jpg',NULL,1);
+/*!40000 ALTER TABLE `dishCategory` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

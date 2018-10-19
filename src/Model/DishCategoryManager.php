@@ -2,12 +2,12 @@
 
 namespace Model;
 
-class DishCategoriesManager extends AbstractManager
+class DishCategoryManager extends AbstractManager
 {
     /**
      * table's name
      */
-    const TABLE = 'dishCategories';
+    const TABLE = 'dishCategory';
 
     /**
      *  Initializes this class.

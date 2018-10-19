@@ -6,7 +6,7 @@ namespace Model;
  * Class dishCategory
  * @package Model
  */
-class DishCategories
+class DishCategory
 {
     /**
      * @var int
@@ -39,7 +39,7 @@ class DishCategories
     /**
      * @param int $id
      */
-    public function setId(int $id) : DishCategories
+    public function setId(int $id) : DishCategory
     {
         $this->id = $id;
 
@@ -57,7 +57,7 @@ class DishCategories
     /**
      * @param string $namePageHome
      */
-    public function setNamePageHome(string $namePageHome) : DishCategories
+    public function setNamePageHome(string $namePageHome) : DishCategory
     {
         $this->namePageHome = $namePageHome;
 
@@ -75,7 +75,7 @@ class DishCategories
     /**
      * @param string $urlPictureForHomePage
      */
-    public function setUrlPictureForHomePage(string $urlPictureForHomePage) : DishCategories
+    public function setUrlPictureForHomePage(string $urlPictureForHomePage) : DishCategory
     {
         $this->urlPictureForHomePage = $urlPictureForHomePage;
 
@@ -93,7 +93,7 @@ class DishCategories
     /**
      * @param bool $isActive
      */
-    public function setIsActive(bool $isActive) : DishCategories
+    public function setIsActive(bool $isActive) : DishCategory
     {
         $this->isActive = $isActive;
 
