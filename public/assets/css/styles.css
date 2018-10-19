@@ -111,8 +111,51 @@ div.container.bg {
     background-image:url(../images/paper.png);
 }
 
-/* contact_details section */
 
+/* dishes section */
+.dishes_concept {
+    font-size: calc(0.77vw + 6pt);
+    color: black;
+    line-height: 1;
+}
+
+.concept_food {
+    padding-bottom: 1em;
+}
+
+.concept {
+    color: #7fb401;
+    font-weight: bold;
+}
+
+hr {border:1px dashed #7fb401;width:50%;}
+
+/* Banner grower */
+.banner-grower {
+    background-image: url("../images/produits-bio-produits-locaux.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.banner-grower p {
+    font-size: calc(0.3vw + 13pt);
+    width:50%;
+    background-image:url("../images/paper.png");
+    transform: skewX(-15deg);
+}
+
+@media (max-width: 760px) {
+    .banner-grower {
+        padding-bottom: calc(1vh + 30%);
+    }
+
+    .banner-grower > p {
+        transform: skewX(0deg);
+        width: 100%;
+    }
+}
+
+/* contact_details section */
 .contact_details{
     background-color: #7fb401;
     color: #ffffff;
@@ -162,4 +205,39 @@ h2 {
     font-family: "Dancing Script", cursive !important;
     font-size: calc(1.5vw + 14pt);
     padding-bottom: 1em;
+}
+
+/* footer */
+footer {
+    background-color: #222222;
+}
+  
+footer li{
+    list-style-type: none;
+}
+  
+footer #pages li{
+    margin-bottom: 30px;
+}
+  
+footer li a {
+    font-family: "PT Serif", serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+  
+footer li a::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #7fb401;
+}
+  
+footer li a:hover {
+    text-decoration: none;
+    color: #7fb401;
 }
