@@ -1,11 +1,11 @@
 <div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor" data-ride="carousel">
     <div class="carousel-inner">
         {% set active = "active" %}
-        {% for opinion in opinionsTripAdvisor %}
+        {% for opinion in opinionTripAdvisor %}
             <div class="carousel-item {{ active }} text-center p-4 ">
                 <div class="d-block">
                     <h3>{{ opinion.title }}</h3>
-                    <p class = "opinionsTripAdvisor">{{ opinion.comment }}</p>
+                    <p>{{ opinion.comment }}</p>
                     <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5</p>
                 </div>
             </div>

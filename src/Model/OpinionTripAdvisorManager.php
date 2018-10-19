@@ -9,10 +9,10 @@
 namespace Model;
 
 /**
- * Class OpinionsTripAdvisorManager
+ * Class OpinionTripAdvisorManager
  * @package Model
  */
-class OpinionsTripAdvisorManager extends AbstractManager
+class OpinionTripAdvisorManager extends AbstractManager
 {
     /**
      *
@@ -20,7 +20,7 @@ class OpinionsTripAdvisorManager extends AbstractManager
     const TABLE = 'opinionTripAdvisor';
 
     /**
-     * OpinionsTripAdvisorManager constructor.
+     * OpinionTripAdvisorManager constructor.
      * @param \PDO $pdo
      */
     public function __construct(\PDO $pdo)

@@ -8,10 +8,10 @@
 namespace Model;
 
 /**
- * Class OpinionsTripAdvisor
+ * Class OpinionTripAdvisor
  * @package Model
  */
-class OpinionsTripAdvisor
+class OpinionTripAdvisor
 {
 
     /**
