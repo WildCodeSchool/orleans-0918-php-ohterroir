@@ -1,11 +1,11 @@
 <div class="row mx-lg-3 mx-lg-5 mt-5">
-    {% for i in 0..3 %}
+    {% for dishCategory in dishCategories %}
         <div class="col-lg-3 col-md-4">
             <div class="category-home mb-5">
                 <p>
-                    <a href="#" class="name" ><span>PLATS CHAUDS</span></a>
+                    <a href="#" class="name" ><span>{{ dishCategory.namePageHome }}</span></a>
                 </p>
-                <p><img src="assets/images/categories/burgers-1.jpg" alt="" class="img-thumbnail img-fluid" ></p>
+                <p><img src="{{ dishCategory.urlPictureForPageHome }}" alt="" class="img-thumbnail img-fluid" ></p>
             </div>
         </div>
     {% endfor %}
