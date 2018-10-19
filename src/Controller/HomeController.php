@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\ContactDetailsManager;
+use Model\ScheduleManager;
 
 class HomeController extends AbstractController
 {
@@ -11,9 +12,13 @@ class HomeController extends AbstractController
         $contactManager = new ContactDetailsManager($this->getPdo());
         $contacts = $contactManager->selectAll();
 
+        $scheduleManager = new ScheduleManager($this->getPdo());
+        $schedules = $scheduleManager->selectSchedule();
+
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",
             "contacts" => $contacts,
+            "schedules" => $schedules,
         ]);
     }
 }
