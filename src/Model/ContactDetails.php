@@ -50,13 +50,14 @@ class ContactDetails
      * @param $id
      * @return contactDetails
      */
-    public function setId($id) : contactDetails
+    public function setId(int $id) : contactDetails
     {
         $this->id = $id;
+      
         return $this;
     }
 
-    /**
+  /**
      * @return string
      */
     public function getAddress() : string
@@ -68,13 +69,14 @@ class ContactDetails
      * @param $address
      * @return contactDetails
      */
-    public function setAddress($address) : contactDetails
+    public function setAddress(string $address) : contactDetails
     {
         $this->address = $address;
+      
         return $this;
     }
 
-    /**
+  /**
      * @return string
      */
     public function getZipCode() : string
@@ -86,9 +88,10 @@ class ContactDetails
      * @param $zipCode
      * @return contactDetails
      */
-    public function setZipCode($zipCode) : contactDetails
+    public function setZipCode(string $zipCode) : contactDetails
     {
         $this->zip_code = $zipCode;
+      
         return $this;
     }
 
@@ -104,9 +107,10 @@ class ContactDetails
      * @param $city
      * @return contactDetails
      */
-    public function setCity($city) : contactDetails
+    public function setCity(string $city) : contactDetails
     {
         $this->city = $city;
+      
         return $this;
     }
 
@@ -122,9 +126,10 @@ class ContactDetails
      * @param $phoneNumber
      * @return contactDetails
      */
-    public function setPhoneNumber($phoneNumber) : contactDetails
+    public function setPhoneNumber(string $phoneNumber) : contactDetails
     {
         $this->phone_number = $phoneNumber;
+      
         return $this;
     }
 
@@ -140,9 +145,10 @@ class ContactDetails
      * @param $emailAddress
      * @return contactDetails
      */
-    public function setEmailAddress($emailAddress) : contactDetails
+    public function setEmailAddress(string $emailAddress) : contactDetails
     {
         $this->email_address = $emailAddress;
+      
         return $this;
     }
 }

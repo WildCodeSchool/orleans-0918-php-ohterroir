@@ -1,6 +1,9 @@
 <?php
 namespace Model;
 
+/**
+ * 
+ */
 class ContactDetailsManager extends AbstractManager
 {
     /**
