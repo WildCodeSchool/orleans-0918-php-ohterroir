@@ -16,14 +16,14 @@ class HomeController extends AbstractController
         $scheduleManager = new ScheduleManager($this->getPdo());
         $schedules = $scheduleManager->selectSchedule();
 
-        $opinionTripAdvisorManager = new OpinionTripAdvisorManager($this->getPdo());
-        $opinionTripAdvisor = $opinionTripAdvisorManager->selectAllOpinionsTripAdvisor();
+        $opinionsTripAdvisorManager = new OpinionTripAdvisorManager($this->getPdo());
+        $opinionsTripAdvisor = $opinionsTripAdvisorManager->selectAll();
 
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",
             "contacts" => $contacts,
             "schedules" => $schedules,
-            "opinionTripAdvisor" => $opinionTripAdvisor,
+            "opinionTripAdvisor" => $opinionsTripAdvisor,
         ]);
     }
 }
