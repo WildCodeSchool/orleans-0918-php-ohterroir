@@ -37,7 +37,7 @@ class OpinionTripAdvisor extends \DateTime
     /**
      * @var \DateTime
      */
-    private $date;
+    private $dateOpinion;
 
     /**
      * @var int
@@ -120,7 +120,7 @@ class OpinionTripAdvisor extends \DateTime
     /**
      * @param \DateTime $date
      */
-    public function setDateOpinion(\DateTime $date)
+    public function setDateOpinion(\DateTime $dateOpinion)
     {
         $this->date = $date;
     }
