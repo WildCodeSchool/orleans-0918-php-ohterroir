@@ -36,7 +36,7 @@ class DishCategory
     /**
      * @var string
      */
-    private $descritpion;
+    private $description;
 
     /**
      * @var string
@@ -91,7 +91,8 @@ class DishCategory
      */
     public function getUrlPictureForHomePage(): string
     {
-        return $this->urlPictureForPageHome;
+        return $this->urlPictureForHomePage;
+
     }
 
     /**
@@ -114,6 +115,7 @@ class DishCategory
 
     /**
      * @param bool $isActive
+     * @return DishCategory
      */
     public function setIsActive(bool $isActive) : DishCategory
     {
@@ -141,17 +143,17 @@ class DishCategory
     /**
      * @return string
      */
-    public function getDescritpion(): string
+    public function getDescription(): string
     {
-        return $this->descritpion;
+        return $this->description;
     }
 
     /**
-     * @param string $descritpion
+     * @param string $description
      */
-    public function setDescritpion(string $descritpion)
+    public function setDescription(string $description)
     {
-        $this->descritpion = $descritpion;
+        $this->description = $description;
     }
 
     /**
@@ -185,5 +187,4 @@ class DishCategory
     {
         $this->urlPictureForPageDish = $urlPictureForPageDish;
     }
-
 }
