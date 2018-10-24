@@ -205,9 +205,15 @@ footer li a:hover {
     text-decoration: none;
     color: #7fb401;
 }
-footer table {
+footer #coordonnees {
     font-family: "PT Serif", serif;
     color: white;
+}
+footer address a {
+    color: white;
+}
+footer address a:hover {
+    color: #7fb401;
 }
 @media screen and (max-width: 375px)
 {
