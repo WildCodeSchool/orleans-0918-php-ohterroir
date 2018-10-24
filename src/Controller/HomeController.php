@@ -23,7 +23,7 @@ class HomeController extends AbstractController
             "home" => "active",
             "contacts" => $contacts,
             "schedules" => $schedules,
-            "opinionTripAdvisor" => $opinionsTripAdvisor,
+            "opinionsTripAdvisor" => $opinionsTripAdvisor,
         ]);
     }
 }
