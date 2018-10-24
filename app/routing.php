@@ -19,4 +19,7 @@ $routes = [
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
     ],
+    'DishCategory' => [ // Controller
+        ['add', '/admin/dishCategory/add', ['GET','POST']], // action, url, method
+    ],
 ];
