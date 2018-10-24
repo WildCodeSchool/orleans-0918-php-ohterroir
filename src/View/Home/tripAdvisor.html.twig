@@ -1,7 +1,7 @@
 <div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor" data-ride="carousel">
     <div class="carousel-inner">
         {% set active = "active" %}
-        {% for opinion in opinionTripAdvisor %}
+        {% for opinion in opinionsTripAdvisor %}
             <div class="carousel-item {{ active }} text-center p-4 ">
                 <div class="d-block">
                     <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5. Le {{ opinion.DateOpinion|date('d/m/Y') }}.</p>
