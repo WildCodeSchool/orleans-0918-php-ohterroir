@@ -16,6 +16,9 @@ $routes = [
     'HomeAdmin' => [
         ['show', '/admin', 'GET'],
     ],
+    'ContactDetails' => [
+        ['edit', '/admin/contact-details/edit/{id:\d+}', ['GET','POST']],
+    ],
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
     ],

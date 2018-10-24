@@ -8,24 +8,35 @@ namespace Model;
  */
 class ContactDetails
 {
-    /** @var int */
+    /**
+     * @var int
+     */
     private $id;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $address;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $zipCode;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $city;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $phoneNumber;
 
-    /** @var string */
+    /**
+     * @var string
+     */
     private $emailAddress;
-
 
     /**
      * @return int
@@ -35,18 +46,18 @@ class ContactDetails
         return $this->id;
     }
 
-
     /**
-     * @param int $id
-     * @return ContactDetails
+     * @param $id
+     * @return contactDetails
      */
     public function setId(int $id) : contactDetails
     {
         $this->id = $id;
+      
+        return $this;
     }
 
-
-    /**
+  /**
      * @return string
      */
     public function getAddress() : string
@@ -54,18 +65,18 @@ class ContactDetails
         return $this->address;
     }
 
-
     /**
-     * @param string $address
-     * @return ContactDetails
+     * @param $address
+     * @return contactDetails
      */
     public function setAddress(string $address) : contactDetails
     {
         $this->address = $address;
+      
+        return $this;
     }
 
-
-    /**
+  /**
      * @return string
      */
     public function getZipCode() : string
@@ -73,16 +84,16 @@ class ContactDetails
         return $this->zipCode;
     }
 
-
     /**
-     * @param string $zipCode
-     * @return ContactDetails
+     * @param $zipCode
+     * @return contactDetails
      */
     public function setZipCode(string $zipCode) : contactDetails
     {
-        $this->zipCode = $zipCode;
+        $this->zip_code = $zipCode;
+      
+        return $this;
     }
-
 
     /**
      * @return string
@@ -92,16 +103,16 @@ class ContactDetails
         return $this->city;
     }
 
-
     /**
-     * @param string $city
-     * @return ContactDetails
+     * @param $city
+     * @return contactDetails
      */
     public function setCity(string $city) : contactDetails
     {
         $this->city = $city;
+      
+        return $this;
     }
-
 
     /**
      * @return string
@@ -111,16 +122,16 @@ class ContactDetails
         return $this->phoneNumber;
     }
 
-
     /**
-     * @param string $phoneNumber
-     * @return ContactDetails
+     * @param $phoneNumber
+     * @return contactDetails
      */
     public function setPhoneNumber(string $phoneNumber) : contactDetails
     {
-        $this->phoneNumber = $phoneNumber;
+        $this->phone_number = $phoneNumber;
+      
+        return $this;
     }
-
 
     /**
      * @return string
@@ -131,11 +142,13 @@ class ContactDetails
     }
 
     /**
-     * @param string $emailAddress
-     * @return ContactDetails
+     * @param $emailAddress
+     * @return contactDetails
      */
     public function setEmailAddress(string $emailAddress) : contactDetails
     {
-        $this->emailAddress = $emailAddress;
+        $this->email_address = $emailAddress;
+      
+        return $this;
     }
 }

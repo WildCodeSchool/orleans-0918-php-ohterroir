@@ -111,6 +111,10 @@ div.container.bg {
     background-image:url(../images/paper.png);
 }
 
+/* back-end */
+.container-admin {
+    background-color: #FFF;
+}
 
 /* dishes section */
 .dishes_concept {
