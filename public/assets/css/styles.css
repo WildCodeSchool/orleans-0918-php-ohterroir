@@ -106,15 +106,13 @@ h1 {
 
 div.container.bg {
     padding-top: 3vh;
+    margin-bottom: 3vh;
+    margin-top: 4vh;
     background-color: white;
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
 
-/* back-end */
-.container-admin {
-    background-color: #FFF;
-}
 
 /* dishes section */
 .dishes_concept {
