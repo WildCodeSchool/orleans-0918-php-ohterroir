@@ -6,7 +6,7 @@ namespace Model;
  * Class SpecialOffers
  * @package Model
  */
-class SpecialOffers
+class SpecialOffers extends \DateTime
 {
     /** @var int */
     private $id;
@@ -17,10 +17,10 @@ class SpecialOffers
     /** @var string */
     private $description;
 
-    /** @var string */
+    /** @var \DateTime */
     private $startDate;
 
-    /** @var string */
+    /** @var \DateTime */
     private $finishDate;
 
     /** @var int */
@@ -87,56 +87,58 @@ class SpecialOffers
 
 
     /**
-     * @return string
+     * @return \DateTime
      */
-    public function getStartDate() : string
+    public function getStartDate() : \DateTime
     {
-        return $this->startDate;
+        $startTimeZone = new \DateTimeZone('+0200');
+        return $startDate = new \DateTime($this->startDate, $startTimeZone);
     }
 
 
     /**
-     * @param string $startDate
+     * @param \DateTime $startDate
      * @return SpecialOffers
      */
-    public function setStartDate(string $startDate) : SpecialOffers
+    public function setStartDate(\DateTime $startDate) : SpecialOffers
     {
         $this->startDate = $startDate;
     }
 
     /**
-     * @return mixed
+     * @return \DateTime
      */
-    public function getFinishDate() : string
+    public function getFinishDate() : \DateTime
     {
-        return $this->finishDate;
+        $startTimeZone = new \DateTimeZone('+0200');
+        return $finishDate = new \DateTime($this->finishDate, $startTimeZone);
     }
 
 
     /**
-     * @param string $finishDate
+     * @param \DateTime $finishDate
      * @return SpecialOffers
      */
-    public function setFinishDate(string $finishDate) : SpecialOffers
+    public function setFinishDate(\DateTime $finishDate) : SpecialOffers
     {
         $this->finishDate = $finishDate;
     }
 
 
     /**
-     * @return int
+     * @return bool
      */
-    public function getNoLimitTimeOffer() : int
+    public function getNoLimitTimeOffer() : bool
     {
         return $this->noLimitTimeOffer;
     }
 
 
     /**
-     * @param int $noLimitTimeOffer
+     * @param bool $noLimitTimeOffer
      * @return SpecialOffers
      */
-    public function setNoLimitTimeOffer(int $noLimitTimeOffer) : SpecialOffers
+    public function setNoLimitTimeOffer(bool $noLimitTimeOffer) : SpecialOffers
     {
         $this->noLimitTimeOffer = $noLimitTimeOffer;
     }

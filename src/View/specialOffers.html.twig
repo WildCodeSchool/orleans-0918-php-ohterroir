@@ -9,7 +9,7 @@
                 </div>
                 <div class="text-center">
                     {% if specialoffer.nolimittimeoffer != 1 %}
-                        <p>Période du : {{ specialoffer.startdate }} au {{ specialoffer.finishdate }}</p>
+                        <p>Période du : {{ specialoffer.startdate|date('d-m-Y') }} au {{ specialoffer.finishdate|date('d-m-Y') }}</p>
                     {% endif %}
                 </div>
             </div>

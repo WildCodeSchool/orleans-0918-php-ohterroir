@@ -18,6 +18,10 @@ class SpecialOffersManager extends AbstractManager
     }
 
     /**
+     * Affiche les offres spéciales en fonction de la date du jour,
+     * lorsque la date du jour est comprise dans la période de l'offre et que celle-ci
+     * est une offre limitée dans le temps.
+     * Affiche aussi en permanence, les offres spéciales non limitées dans le temps.
      * @return array
      */
     public function show() : array
