@@ -1,0 +1,33 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Ajouter des catégories de plats{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Ajouter une catégorie de plats</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="namePageHome">Titre</label>
+                <input type="hidden" value="" name="id">
+                <input type="hidden" value="{{ dishCategory.isActive is defined ? dishCategory.isActive : 0 }}" name="isActive">
+                <input type="text" value="{{ dishCategory.namePageHome }}" name="namePageHome" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="namePageDish">Nom du plat</label>
+                <input type="text" value="{{ dishCategory.namePageDish }}" name="namePageDish" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" value="{{ dishCategory.description }}" name="description" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="complementaryInformation">Information complémentaires</label>
+                <input type="text" value="{{ dishCategory.complementaryInformation }}" name="complementaryInformation" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Valider">Validé</button>
+        </form>
+        <div>
+            <a class="btn btn-primary" href="/admin">Back to home</a>
+        </div>
+    </div>
+{% endblock %}
