@@ -27,7 +27,7 @@ CREATE TABLE `opinionTripAdvisor` (
   `pseudo` varchar(45) NOT NULL,
   `title` varchar(50) NOT NULL,
   `comment` varchar(800) NOT NULL,
-  `date` date NOT NULL,
+  `dateOpinion` date NOT NULL,
   `note` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
