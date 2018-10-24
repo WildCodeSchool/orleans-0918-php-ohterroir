@@ -8,12 +8,12 @@
 
 namespace Controller;
 
-class ProducerController extends AbstractController
+class GrowerController extends AbstractController
 {
     public function show()
     {
-        return $this->twig->render('Producer/producerPage.html.twig',[
-            "producerPage" => "active",
+        return $this->twig->render('Grower/growerPage.html.twig',[
+            "growerPage" => "active",
         ]);
     }
 }

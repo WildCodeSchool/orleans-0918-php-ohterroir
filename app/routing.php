@@ -19,7 +19,7 @@ $routes = [
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
     ],
-    'Producer' =>[
-        ['show', '/producer', 'GET'],
+    'Grower' =>[
+        ['show', '/grower', 'GET'],
     ],
 ];
