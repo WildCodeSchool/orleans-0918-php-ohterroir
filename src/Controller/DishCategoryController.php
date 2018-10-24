@@ -16,19 +16,42 @@ class DishCategoryController extends AbstractController
     public function add() : string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $dishCategoryManager = new DishCategoryManager($this->getPdo());
-            $dishCategory = new DishCategory();
-            $dishCategory->setNamePageHome($_POST['namePageHome']);
-            $dishCategory->setNamePageDish($_POST['namePageDish']);
-            $dishCategory->setDescription($_POST['description']);
-            $dishCategory->setComplementaryInformation($_POST['complementaryInformation']);
-            //$dishCategory->setUrlPictureForHomePage($_POST['urlPictureForPageHome']);
-            //$dishCategory->setUrlPictureForPageDish($_POST['urlPictureForPageDish']);
-            $dishCategory->setIsActive($_POST['isActive']);
-            $id = $dishCategoryManager->insert($dishCategory);
+            foreach ($_POST as $key => $value) {
+                $cleanPost[$key] = trim($value);
+            }
+            $errors = [];
+            if (empty($cleanPost['namePageHome'])) {
+                $errors[] = "La catégorie du plat est obligatoire, merci de la renseigner";
+            }
+            if (empty($cleanPost['namePageDish'])) {
+                $errors[] = "Le nom du plat est obligatoire, merci de le renseigner";
+            }
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]0-9]+/iu", $cleanPost['namePageHome'])) {
+                $errors[] = "les caractères spéciaux ne sont pas autorisés";
+            }
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]0-9]+/iu", $cleanPost['namePageDish'])) {
+                $errors[] = "les caractères spéciaux ne sont pas autorisés";
+            }
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]0-9]+/iu", $cleanPost['description'])) {
+                $errors[] = "les caractères spéciaux ne sont pas autorisés";
+            }
+            if (preg_match_all("/[\[^@&\"()!_$*€£`+=\/;?#<>\]0-9]+/iu", $cleanPost['complementaryInformation'])) {
+                $errors[] = "les caractères spéciaux ne sont pas autorisés";
+            }
 
-            header('Location:/admin/dishCategory/add');
-            exit();
+            if (empty($errors)) {
+                $dishCategoryManager = new DishCategoryManager($this->getPdo());
+                $dishCategory = new DishCategory();
+                $dishCategory->setNamePageHome($cleanPost['namePageHome']);
+                $dishCategory->setNamePageDish($cleanPost['namePageDish']);
+                $dishCategory->setDescription($cleanPost['description']);
+                $dishCategory->setComplementaryInformation($cleanPost['complementaryInformation']);
+                $dishCategory->setIsActive($_POST['isActive']);
+                $id = $dishCategoryManager->insert($dishCategory);
+
+                header('Location:/admin/dishCategory/add');
+                exit();
+            }
         }
         return $this->twig->render('Admin/addDishCategory.html.twig');
     }

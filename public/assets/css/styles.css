@@ -241,3 +241,8 @@ footer li a:hover {
     text-decoration: none;
     color: #7fb401;
 }
+
+/* DishCategory */
+.dishCategory {
+    margin-top: 30vh;
+}
