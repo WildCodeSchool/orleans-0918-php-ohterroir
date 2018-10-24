@@ -29,6 +29,28 @@ class DishCategory
     private $isActive;
 
     /**
+     * @var string
+     */
+    private $namePageDish;
+
+    /**
+     * @var string
+     */
+    private $descritpion;
+
+    /**
+     * @var string
+     */
+    private $complementaryInformation;
+
+    /**
+     * @var string
+     */
+    private $urlPictureForPageDish;
+
+
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -99,4 +121,69 @@ class DishCategory
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getNamePageDish(): string
+    {
+        return $this->namePageDish;
+    }
+
+    /**
+     * @param string $namePageDish
+     */
+    public function setNamePageDish(string $namePageDish)
+    {
+        $this->namePageDish = $namePageDish;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescritpion(): string
+    {
+        return $this->descritpion;
+    }
+
+    /**
+     * @param string $descritpion
+     */
+    public function setDescritpion(string $descritpion)
+    {
+        $this->descritpion = $descritpion;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComplementaryInformation(): string
+    {
+        return $this->complementaryInformation;
+    }
+
+    /**
+     * @param string $complementaryInformation
+     */
+    public function setComplementaryInformation(string $complementaryInformation)
+    {
+        $this->complementaryInformation = $complementaryInformation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUrlPictureForPageDish(): string
+    {
+        return $this->urlPictureForPageDish;
+    }
+
+    /**
+     * @param string $urlPictureForPageDish
+     */
+    public function setUrlPictureForPageDish(string $urlPictureForPageDish)
+    {
+        $this->urlPictureForPageDish = $urlPictureForPageDish;
+    }
+
 }
