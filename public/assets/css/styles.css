@@ -212,6 +212,11 @@ h2 {
 }
 
 /* footer */
+footer img {
+    height: 18.75rem;
+    width: 28.125rem;
+    padding-left: 0.625rem;
+}
 footer {
     background-color: #222222;
 }
@@ -244,4 +249,22 @@ footer li a::after {
 footer li a:hover {
     text-decoration: none;
     color: #7fb401;
+}
+footer #coordonnees {
+    font-family: "PT Serif", serif;
+    color: white;
+}
+footer address a {
+    color: white;
+}
+footer address a:hover {
+    color: #7fb401;
+}
+@media screen and (max-width: 375px)
+{
+    footer img {
+        margin-bottom: 1.25rem;
+        height: 15.625rem;
+        width: 22.8125rem;
+    }
 }
