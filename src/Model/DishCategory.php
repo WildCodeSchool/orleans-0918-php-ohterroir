@@ -60,6 +60,7 @@ class DishCategory
 
     /**
      * @param int $id
+     * @return DishCategory
      */
     public function setId(int $id) : DishCategory
     {
@@ -78,6 +79,7 @@ class DishCategory
 
     /**
      * @param string $namePageHome
+     * @return DishCategory
      */
     public function setNamePageHome(string $namePageHome) : DishCategory
     {
@@ -97,6 +99,7 @@ class DishCategory
 
     /**
      * @param string $urlPictureForHomePage
+     * @return DishCategory
      */
     public function setUrlPictureForHomePage(string $urlPictureForHomePage) : DishCategory
     {
@@ -134,10 +137,12 @@ class DishCategory
 
     /**
      * @param string $namePageDish
+     * @return DishCategory
      */
-    public function setNamePageDish(string $namePageDish)
+    public function setNamePageDish(string $namePageDish) : DishCategory
     {
         $this->namePageDish = $namePageDish;
+        return $this;
     }
 
     /**
@@ -150,10 +155,12 @@ class DishCategory
 
     /**
      * @param string $description
+     * @return DishCategory
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description) : DishCategory
     {
         $this->description = $description;
+        return $this;
     }
 
     /**
@@ -166,10 +173,12 @@ class DishCategory
 
     /**
      * @param string $complementaryInformation
+     * @return DishCategory
      */
-    public function setComplementaryInformation(string $complementaryInformation)
+    public function setComplementaryInformation(string $complementaryInformation) : DishCategory
     {
         $this->complementaryInformation = $complementaryInformation;
+        return $this;
     }
 
     /**
@@ -182,9 +191,11 @@ class DishCategory
 
     /**
      * @param string $urlPictureForPageDish
+     * @return DishCategory
      */
-    public function setUrlPictureForPageDish(string $urlPictureForPageDish)
+    public function setUrlPictureForPageDish(string $urlPictureForPageDish) : DishCategory
     {
         $this->urlPictureForPageDish = $urlPictureForPageDish;
+        return $this;
     }
 }
