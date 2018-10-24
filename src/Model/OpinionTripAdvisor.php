@@ -11,7 +11,7 @@ namespace Model;
  * Class OpinionTripAdvisor
  * @package Model
  */
-class OpinionTripAdvisor extends \DateTime
+class OpinionTripAdvisor
 {
 
     /**
@@ -114,15 +114,15 @@ class OpinionTripAdvisor extends \DateTime
     public function getDateOpinion(): \DateTime
     {
         $timeZone = new \DateTimeZone('+0200');
-        return $date = new \DateTime($this->date, $timeZone);
+        return $dateOpinion = new \DateTime($this->dateOpinion, $timeZone);
     }
 
     /**
-     * @param \DateTime $date
+     * @param \DateTime $dateOpinion
      */
     public function setDateOpinion(\DateTime $dateOpinion)
     {
-        $this->date = $date;
+        $this->dateOpinion = $dateOpinion;
     }
 
     /**
