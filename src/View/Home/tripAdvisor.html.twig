@@ -4,7 +4,7 @@
         {% for opinion in opinionTripAdvisor %}
             <div class="carousel-item {{ active }} text-center p-4 ">
                 <div class="d-block">
-                    <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5. Le {{ opinion.DateOpinion|date('d-m-Y') }}.</p>
+                    <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5. Le {{ opinion.DateOpinion|date('d/m/Y') }}.</p>
                     <h3>{{ opinion.title }}</h3>
                     <p>{{ opinion.comment }}</p>
                 </div>
