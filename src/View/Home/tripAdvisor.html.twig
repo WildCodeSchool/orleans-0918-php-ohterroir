@@ -1,10 +1,9 @@
 <div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor" data-ride="carousel">
     <div class="carousel-inner">
-        {% set active = "active" %}
         {% for opinion in opinionsTripAdvisor %}
             {% if loop.first %}
             <div class="carousel-item active text-center p-4 ">
-            {% elseif loop.last %}
+            {% else %}
             <div class="carousel-item text-center p-4 ">
             {% endif %}
                 <div class="d-block">
