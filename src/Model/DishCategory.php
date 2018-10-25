@@ -94,7 +94,6 @@ class DishCategory
     public function getUrlPictureForHomePage(): string
     {
         return $this->urlPictureForHomePage;
-
     }
 
     /**
