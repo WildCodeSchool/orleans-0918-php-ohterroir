@@ -1,0 +1,27 @@
+<div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor" data-ride="carousel">
+    <div class="carousel-inner">
+        {% set active = "active" %}
+        {% for opinion in opinionsTripAdvisor %}
+            {% if loop.first %}
+            <div class="carousel-item active text-center p-4 ">
+            {% elseif loop.last %}
+            <div class="carousel-item text-center p-4 ">
+            {% endif %}
+                <div class="d-block">
+                    <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5. Le {{ opinion.DateOpinion|date('d/m/Y') }}.</p>
+                    <h3>{{ opinion.title }}</h3>
+                    <p>{{ opinion.comment }}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselOpinionsTripAdvisor" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselOpinionsTripAdvisor" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
