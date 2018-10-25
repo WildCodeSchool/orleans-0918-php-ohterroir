@@ -16,13 +16,13 @@
                 <h5 class="card-title">Oh Terroir</h5>
                 <p class="card-text">
                 <address>
-                    {{ contactDetails.0.address }}<br/>
-                    {{ contactDetails.0.zipCode ~ ' ' ~ contactDetails.0.city }}<br/>
-                    Tél. {{ contactDetails.0.phoneNumber }}<br/>
-                    Email. {{ contactDetails.0.emailAddress }}
+                    {{ contactDetails.address }}<br/>
+                    {{ contactDetails.zipCode ~ ' ' ~ contactDetails.city }}<br/>
+                    Tél. {{ contactDetails.phoneNumber }}<br/>
+                    Email. {{ contactDetails.emailAddress }}
                 </address>
                 </p>
-                <form method="GET" action="/admin/contact-details/edit/{{ contactDetails.0.id }}">
+                <form method="GET" action="/admin/contact-details/edit/{{ contactDetails.id }}">
                     <button class="btn btn-dark">Modifier</button>
                 </form>
             </div>

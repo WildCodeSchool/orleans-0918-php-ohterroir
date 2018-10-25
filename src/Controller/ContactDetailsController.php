@@ -14,7 +14,7 @@ class ContactDetailsController extends AbstractController
     public function show()
     {
         $contactManager = new ContactDetailsManager($this->getPdo());
-        $contactDetails = $contactManager->selectAll();
+        $contactDetails = $contactManager->selectUniquetEntry();
 
         return $this->twig->render('Admin/contactDetailsShow.html.twig', [
             'contactDetails' => $contactDetails
