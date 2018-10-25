@@ -49,7 +49,7 @@ class DishCategoryController extends AbstractController
                 $dishCategory->setIsActive($_POST['isActive']);
                 $id = $dishCategoryManager->insert($dishCategory);
 
-                header('Location:/admin/dishCategory/add');
+                header('Location:/admin/categorie-plats/ajouter');
                 exit();
             }
         }
