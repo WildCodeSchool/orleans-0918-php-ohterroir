@@ -48,7 +48,7 @@ class DishCategoryManager extends AbstractManager
         $statement->bindValue(':complementaryInformation', $dishCategory->getComplementaryInformation(), \PDO::PARAM_STR);
         $statement->bindValue(':urlPictureForPageHome', '', \PDO::PARAM_STR);
         $statement->bindValue(':urlPictureForPageDish', '', \PDO::PARAM_STR);
-        $statement->bindValue(':isActive', 0, \PDO::PARAM_INT);
+        $statement->bindValue(':isActive', false, \PDO::PARAM_BOOL);
         if ($statement->execute()) {
             return $this->pdo->lastInsertId();
         }
