@@ -2,15 +2,15 @@
 
 namespace Controller;
 
-use Model\SpecialOffersManager;
+use Model\SpecialOfferManager;
 
 class HomeController extends AbstractController
 {
 
     public function show()
     {
-        $specialOffersManager = new specialOffersManager($this->getPdo());
-        $specialOffers = $specialOffersManager->show();
+        $specialOffersManager = new SpecialOfferManager($this->getPdo());
+        $specialOffers = $specialOffersManager->getSpecialOffers();
 
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",

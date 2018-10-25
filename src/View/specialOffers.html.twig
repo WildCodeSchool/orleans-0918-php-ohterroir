@@ -8,8 +8,8 @@
                     <p>{{ specialoffer.description }}</p>
                 </div>
                 <div class="text-center">
-                    {% if specialoffer.nolimittimeoffer != 1 %}
-                        <p>Période du : {{ specialoffer.startdate|date('d-m-Y') }} au {{ specialoffer.finishdate|date('d-m-Y') }}</p>
+                    {% if (specialoffer.startdate is not null) and (specialoffer.finishdate is not null) %}
+                        <p>Période du : {{ specialoffer.startdate|date('d/m/Y') }} au {{ specialoffer.finishdate|date('d/m/Y') }}</p>
                     {% endif %}
                 </div>
             </div>

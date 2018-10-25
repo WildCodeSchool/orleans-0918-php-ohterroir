@@ -3,10 +3,10 @@
 namespace Model;
 
 /**
- * Class SpecialOffers
+ * Class SpecialOffer
  * @package Model
  */
-class SpecialOffers extends \DateTime
+class SpecialOffer
 {
     /** @var int */
     private $id;
@@ -23,9 +23,6 @@ class SpecialOffers extends \DateTime
     /** @var \DateTime */
     private $finishDate;
 
-    /** @var int */
-    private $noLimitTimeOffer;
-
     /** @var string */
     private $imgLink;
 
@@ -40,11 +37,12 @@ class SpecialOffers extends \DateTime
 
     /**
      * @param int $id
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setId(int $id) : SpecialOffers
+    public function setId(int $id) : SpecialOffer
     {
         $this->id = $id;
+        return $this;
     }
 
 
@@ -59,11 +57,12 @@ class SpecialOffers extends \DateTime
 
     /**
      * @param string $name
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setName(string $name) : SpecialOffers
+    public function setName(string $name) : SpecialOffer
     {
         $this->name = $name;
+        return $this;
     }
 
 
@@ -78,69 +77,51 @@ class SpecialOffers extends \DateTime
 
     /**
      * @param string $description
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setDescription(string $description) : SpecialOffers
+    public function setDescription(string $description) : SpecialOffer
     {
         $this->description = $description;
+        return $this;
     }
 
 
     /**
      * @return \DateTime
      */
-    public function getStartDate() : \DateTime
+    public function getStartDate() : ?\DateTime
     {
-        $startTimeZone = new \DateTimeZone('+0200');
-        return $startDate = new \DateTime($this->startDate, $startTimeZone);
+        return $this->startDate;
     }
 
 
     /**
      * @param \DateTime $startDate
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setStartDate(\DateTime $startDate) : SpecialOffers
+    public function setStartDate(\DateTime $startDate) : SpecialOffer
     {
         $this->startDate = $startDate;
+        return $this;
     }
 
     /**
      * @return \DateTime
      */
-    public function getFinishDate() : \DateTime
+    public function getFinishDate() : ?\DateTime
     {
-        $startTimeZone = new \DateTimeZone('+0200');
-        return $finishDate = new \DateTime($this->finishDate, $startTimeZone);
+        return $this->finishDate;
     }
 
 
     /**
      * @param \DateTime $finishDate
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setFinishDate(\DateTime $finishDate) : SpecialOffers
+    public function setFinishDate(\DateTime $finishDate) : SpecialOffer
     {
         $this->finishDate = $finishDate;
-    }
-
-
-    /**
-     * @return bool
-     */
-    public function getNoLimitTimeOffer() : bool
-    {
-        return $this->noLimitTimeOffer;
-    }
-
-
-    /**
-     * @param bool $noLimitTimeOffer
-     * @return SpecialOffers
-     */
-    public function setNoLimitTimeOffer(bool $noLimitTimeOffer) : SpecialOffers
-    {
-        $this->noLimitTimeOffer = $noLimitTimeOffer;
+        return $this;
     }
 
 
@@ -155,10 +136,11 @@ class SpecialOffers extends \DateTime
 
     /**
      * @param string $imgLink
-     * @return SpecialOffers
+     * @return SpecialOffer
      */
-    public function setImgLink(string $imgLink) : SpecialOffers
+    public function setImgLink(string $imgLink) : SpecialOffer
     {
         $this->imgLink = $imgLink;
+        return $this;
     }
 }
