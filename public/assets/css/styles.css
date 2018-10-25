@@ -212,6 +212,13 @@ h2 {
 }
 
 /* footer */
+footer h3{
+    font-family: "PT Serif", serif;
+    color: #7fb401;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
 footer img {
     height: 18.75rem;
     width: 28.125rem;
