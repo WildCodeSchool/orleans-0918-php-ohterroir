@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `schedule`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `openingHour1` varchar(5) NOT NULL,
-  `openingHour2` varchar(5) NOT NULL,
+  `openingHour1` time NOT NULL,
+  `openingHour2` time NOT NULL,
   `weekdaysId` int(11) NOT NULL,
   PRIMARY KEY (`id`,`weekdaysId`),
   KEY `fk_opening_time_weekdays_idx` (`weekdaysId`)
