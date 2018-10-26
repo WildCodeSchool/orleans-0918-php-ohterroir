@@ -36,8 +36,12 @@ class ScheduleManager extends AbstractManager
             $schedule = new Schedule();
 
             $schedule->setId($result['id']);
-            $schedule->setOpeningHour1(\DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour1']));
-            $schedule->setOpeningHour2(\DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour2']));
+            $schedule->setOpeningHour1(
+                \DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour1'])
+            );
+            $schedule->setOpeningHour2(
+                \DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour2'])
+            );
             $schedule->setWeekdaysId($result['weekdaysId']);
             $schedule->setDayName($result['dayName']);
 
