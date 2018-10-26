@@ -26,11 +26,24 @@ class ScheduleManager extends AbstractManager
      */
     public function selectSchedule() : array
     {
-        return $this->pdo->query(
-            'SELECT * FROM ' . $this->table . ' INNER JOIN weekdays ON weekdays.id = schedule.weekdaysid',
-            \PDO::FETCH_CLASS,
-            $this->className
-        )
-            ->fetchAll();
+        $schedules = [];
+        $results = $this->pdo->query(
+            'SELECT * FROM ' . $this->table . ' RIGHT JOIN weekdays ON weekdays.id = schedule.weekdaysid',
+            \PDO::FETCH_ASSOC
+        )->fetchAll();
+
+        foreach ($results as $key => $result) {
+            $schedule = new Schedule();
+
+            $schedule->setId($result['id']);
+            $schedule->setOpeningHour1(\DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour1']));
+            $schedule->setOpeningHour2(\DateTime::createFromFormat('Y-m-d H:i:s', '1970-01-01 ' . $result['openingHour2']));
+            $schedule->setWeekdaysId($result['weekdaysId']);
+            $schedule->setDayName($result['dayName']);
+
+            $schedules[] = $schedule;
+        }
+
+        return $schedules;
     }
 }

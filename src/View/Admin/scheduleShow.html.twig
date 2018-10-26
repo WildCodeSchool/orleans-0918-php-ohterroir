@@ -1,0 +1,36 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}
+    Gérer les horaires d'ouvertures - {{ parent() }}
+{%  endblock %}
+
+{%  block page_title %}
+    Gérer les horaires d'ouvertures
+{%  endblock %}
+
+{% block content %}
+   <div class="row">
+        <div class="col-lg-8 col-sm-12 mx-auto ">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        {% for i in 0..schedules|length - 1 %}
+                            <div class="row">
+                                <div class="col-6">{{ schedules[i].day }}</div>
+                             {% if schedules[i].timeSlot1 == '00:00 - 00:00' %}
+                                <div class="col-6">Fermé</div>
+                            {% else %}
+                                <div class="col-3">{{ schedules[i].timeSlot1 }}</div>
+                                <div class="col-3">{{ schedules[i].timeSlot2 }}</div>
+                            {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <form method="GET" action="#" class="text-center mt-2">
+                        <button class="btn btn-dark">Modifier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
+{% endblock %}
