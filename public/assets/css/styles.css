@@ -106,6 +106,8 @@ h1 {
 
 div.container.bg {
     padding-top: 3vh;
+    margin-bottom: 3vh;
+    margin-top: 4vh;
     background-color: white;
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
@@ -253,7 +255,6 @@ footer li a {
     font-family: "PT Serif", serif;
     font-size: 1.3rem;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #fff;
 }
