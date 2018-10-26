@@ -12,7 +12,7 @@ class GrowerController extends AbstractController
 {
     public function show()
     {
-        return $this->twig->render('Grower/growerPage.html.twig',[
+        return $this->twig->render('Grower/show.html.twig',[
             "growerPage" => "active",
         ]);
     }
