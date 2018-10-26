@@ -212,15 +212,25 @@ h2 {
 }
 
 /* footer */
-footer h4{
+footer h3{
     font-family: "PT Serif", serif;
     color: #7fb401;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
 }
+
+footer h4{
+    font-family: "PT Serif", serif;
+  color: #7fb401;
+}
+
 footer img {
     height: 18.75rem;
     width: 28.125rem;
     padding-left: 0.625rem;
 }
+
 footer {
     background-color: #222222;
 }
