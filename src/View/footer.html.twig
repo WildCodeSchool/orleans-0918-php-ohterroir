@@ -1,0 +1,57 @@
+<footer>
+    <h3>NOUS CONTACTER</h3>
+    <div id="pages">
+        <div class="row">
+            <div class="col">
+                <img src="/assets/images/terrasse_footer.jpg" />
+            </div>
+            <div class="col">
+                <iframe src="https://maps.google.com/maps?q={{ contacts.0.address|replace({' ': '+'}) ~ '+' ~ contacts.0.zipcode }}&hl=fr;&amp;output=embed" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><a href="" >PLATS & DESSERTS</a></li>
+                    <li><a href="" >PARTENAIRES</a></li>
+                    <li><a href="" >MENTIONS LEGALES</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="coordonnees">
+        <div class="row">
+            <div class="col text-center">
+                {% for contact in contacts %}
+                <address>
+                    {{ contact.address }}<br/>
+                    {{ contact.zipcode }} - {{ contact.city }}<br/>
+                    <a href="tel:{{ contact.phonenumber }}">{{ contact.phonenumber }}</a><br/>
+                </address>
+                {% endfor %}
+            </div>
+            <div class="col text-center">
+
+                    <ul>
+                    {% for i in 0..schedules|length - 1 %}
+                        {% if schedules[i].dayname == schedules[i+1].dayname %}
+                        <li>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }} -- {{ schedules[i+1].openinghour1 }} - {{ schedules[i+1].openinghour2 }}</li>
+                    {% set i = i+2 %}
+                    {% elseif schedules[i].weekdaysid > schedules[i+1].weekdaysid %}
+                        <li>{{ schedules[i-1].dayname }} : {{ schedules[i-1].openinghour1 }} - {{ schedules[i-1].openinghour2 }}</li>
+                        <li>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }}</li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col text-center">
+                <h4>SUIVEZ-NOUS</h4>
+                <div class="row">
+                    <div class="col">
+                        <a href="https://www.facebook.com/OhTerroirFastGood/"><img src="https://www.shareicon.net/download/2015/09/23/106006_logo.svg"></a>
+                        <a href="https://www.tripadvisor.fr/Restaurant_Review-g187129-d3686919-Reviews-Oh_Terroir_version_Fast_Good-Orleans_Loiret_Centre_Val_de_Loire.html"><img src="https://png.icons8.com/color/1600/tripadvisor.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
