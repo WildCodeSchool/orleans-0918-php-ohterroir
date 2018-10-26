@@ -90,7 +90,7 @@ class ContactDetails
      */
     public function setZipCode(string $zipCode) : contactDetails
     {
-        $this->zip_code = $zipCode;
+        $this->zipCode = $zipCode;
       
         return $this;
     }
@@ -128,7 +128,7 @@ class ContactDetails
      */
     public function setPhoneNumber(string $phoneNumber) : contactDetails
     {
-        $this->phone_number = $phoneNumber;
+        $this->phoneNumber = $phoneNumber;
       
         return $this;
     }
@@ -147,7 +147,7 @@ class ContactDetails
      */
     public function setEmailAddress(string $emailAddress) : contactDetails
     {
-        $this->email_address = $emailAddress;
+        $this->emailAddress = $emailAddress;
       
         return $this;
     }
