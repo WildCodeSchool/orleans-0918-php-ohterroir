@@ -212,6 +212,10 @@ h2 {
 }
 
 /* footer */
+footer h4{
+    font-family: "PT Serif", serif;
+    color: #7fb401;
+}
 footer img {
     height: 18.75rem;
     width: 28.125rem;
@@ -259,6 +263,10 @@ footer address a {
 }
 footer address a:hover {
     color: #7fb401;
+}
+footer a img{
+    height: 6.25rem;
+    width: 6.25rem;
 }
 @media screen and (max-width: 375px)
 {
