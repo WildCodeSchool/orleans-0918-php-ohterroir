@@ -1,0 +1,18 @@
+ <div class="row special_offers">
+    {% for specialoffer in specialoffers %}
+        <div class="col-md-4 mb-4 mx-auto">
+            <div>
+                <h5>{{ specialoffer.name }}</h5>
+                <div class="media">
+                    <img class="mr-3" src="{{ specialoffer.imglink }}" alt="">
+                    <p>{{ specialoffer.description }}</p>
+                </div>
+                <div class="text-center">
+                    {% if (specialoffer.startdate is not null) and (specialoffer.finishdate is not null) %}
+                        <p>Période du : {{ specialoffer.startdate|date('d/m/Y') }} au {{ specialoffer.finishdate|date('d/m/Y') }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+ </div>

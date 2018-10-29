@@ -106,11 +106,23 @@ h1 {
 
 div.container.bg {
     padding-top: 3vh;
+    margin-bottom: 3vh;
+    margin-top: 4vh;
     background-color: white;
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
 
+/* special_offers section */
+
+.special_offers p{
+    font-size: 1.2em;
+}
+
+/* back-end */
+.container-admin {
+    background-color: #FFF;
+}
 
 /* dishes section */
 .dishes_concept {
@@ -153,6 +165,18 @@ hr {border:1px dashed #7fb401;width:50%;}
         transform: skewX(0deg);
         width: 100%;
     }
+}
+
+/* carousel TripAdvisor*/
+.slideOpinionsTripAdvisor .carousel-inner .carousel-item{
+    height: 12rem;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 /* contact_details section */
@@ -208,6 +232,25 @@ h2 {
 }
 
 /* footer */
+footer h3{
+    font-family: "PT Serif", serif;
+    color: #7fb401;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+footer h4{
+    font-family: "PT Serif", serif;
+  color: #7fb401;
+}
+
+footer img {
+    height: 18.75rem;
+    width: 28.125rem;
+    padding-left: 0.625rem;
+}
+
 footer {
     background-color: #222222;
 }
@@ -224,7 +267,6 @@ footer li a {
     font-family: "PT Serif", serif;
     font-size: 1.3rem;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #fff;
 }
@@ -240,6 +282,29 @@ footer li a::after {
 footer li a:hover {
     text-decoration: none;
     color: #7fb401;
+}
+
+footer #coordonnees {
+    font-family: "PT Serif", serif;
+    color: white;
+}
+footer address a {
+    color: white;
+}
+footer address a:hover {
+    color: #7fb401;
+}
+footer a img{
+    height: 6.25rem;
+    width: 6.25rem;
+}
+@media screen and (max-width: 375px)
+{
+    footer img {
+        margin-bottom: 1.25rem;
+        height: 15.625rem;
+        width: 22.8125rem;
+    }
 }
 
 /* section dishes menu*/
@@ -268,6 +333,3 @@ footer li a:hover {
 .drinks_sentence {
     font-size: 1.1em;
 }
-
-
-
