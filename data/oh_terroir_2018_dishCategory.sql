@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 5.7.23, for Linux (x86_64)
+CREATE DATABASE  IF NOT EXISTS `oh_terroir_2018` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `oh_terroir_2018`;
+-- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
 --
 -- Host: localhost    Database: oh_terroir_2018
 -- ------------------------------------------------------
--- Server version	5.7.23-0ubuntu0.18.04.1
+-- Server version	5.7.24-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -41,7 +43,7 @@ CREATE TABLE `dishCategory` (
 
 LOCK TABLES `dishCategory` WRITE;
 /*!40000 ALTER TABLE `dishCategory` DISABLE KEYS */;
-INSERT INTO `dishCategory` VALUES (1,'BURGERS','Nos Burgers','Pain Bio, fromage cantal AOP, Salade de Roquette, Sauces fabriquées par un chef étoilé, frites à base de pommes de terre Bio locales.','Nos viandes de boeuf locale et bio, de race Aberdeen Angus. Nos pommes de terre à frites sont locales et bio. Toutes nos sauces à burges sont cenfectionnées par un chef étoilé.','/assets/images/categories/1.jpg',NULL,1),(2,'PLATS CHAUDS','Nos plats chauds','Pâtes fermières locales, petit épeautre bio local en risotto, Quinoa bio, Lentilles bio locales...','Pâtes fabriquées à base de crème fraîche bio, Sauce tomate fabriquée au coeur de la provence etc...','/assets/images/categories/2.jpg',NULL,1),(3,'SALADES','Nos salades maison','Salades fraîches maison','Nos salades composées sont préparées uniquement au moment de la commande devant vous.','/assets/images/categories/3.jpg',NULL,1),(4,'DESSERTS','Nos desserts','Faisselle bio, riz au lait, pot de glace ...','La compote bio fabriquée à Amilly, ou encore la faiselle bio de la Ferme des Grands Champs à Lorris , et bien d’autres desserts','/assets/images/categories/4.jpg',NULL,1);
+INSERT INTO `dishCategory` VALUES (1,'BURGERS','Nos Burgers','Pain Bio, Fromage Cantal AOP, Salade de Roquette, Sauces fabriquées par un chef étoilé, Frites à base de pommes de terre Bio locales.','Nos viandes de boeuf locales et bio, de race Aberdeen Angus. Nos pommes de terre à frites sont locales et bio. Toutes nos sauces à burgers sont confectionnées par un chef étoilé.','/assets/images/categories/1.jpg','/assets/images/categories/fullsize/1-fs.jpg',1),(2,'PLATS CHAUDS','Nos plats chauds','Pâtes fermières locales, petit épeautre bio local en risotto, Quinoa bio, Lentilles bio locales...','Pâtes fabriquées à base de crème fraîche bio, Sauce tomate fabriquée au coeur de la provence etc...','/assets/images/categories/2.jpg','/assets/images/categories/fullsize/2-fs.jpg',1),(3,'SALADES','Nos salades maison','Salades fraîches maison','Nos salades composées sont préparées uniquement au moment de la commande devant vous.','/assets/images/categories/3.jpg','/assets/images/categories/fullsize/3-fs.jpg',1),(4,'DESSERTS','Nos desserts','Faisselle bio, riz au lait, pot de glace ...','La compote bio fabriquée à Amilly, ou encore la faiselle bio de la Ferme des Grands Champs à Lorris , et bien d’autres desserts','/assets/images/categories/4.jpg','/assets/images/categories/fullsize/4-fs.jpg',1);
 /*!40000 ALTER TABLE `dishCategory` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-19 11:42:43
+-- Dump completed on 2018-10-29 11:40:07
