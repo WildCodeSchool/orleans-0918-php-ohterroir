@@ -12,10 +12,10 @@
         </div>
     </div>
     {% if loop.first %}
-    <div id="collapse{{ growerCategory.id }}" class="collapse show" aria-labelledby="headingOne"
+    <div id="collapse{{ growerCategory.id }}" class="collapse show" aria-labelledby="heading{{ growerCategory.id }}"
          data-parent="#accordion">
     {% else %}
-    <div id="collapse{{ growerCategory.id }}" class="collapse" aria-labelledby="headingOne"
+    <div id="collapse{{ growerCategory.id }}" class="collapse" aria-labelledby="heading{{ growerCategory.id }}"
          data-parent="#accordion">
     {% endif %}
         <div class="card-body">
