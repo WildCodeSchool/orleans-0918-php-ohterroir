@@ -11,7 +11,9 @@
 {% block content %}
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-dark btn-lg mx-auto d-block button_dishCategory button_dishCategory_add" ><a href="/admin/categorie-plats/ajouter">Ajouter</a></button>
+            <form method="GET" action="/admin/categorie-plats/ajouter">
+                <button class="btn btn-dark btn-lg mx-auto d-block button_dishCategory button_dishCategory_add">Ajouter</button>
+            </form>
         </div>
     </div>
     {% for dishCategory in dishCategories %}
@@ -20,10 +22,14 @@
                 {{ dishCategory.namePageHome }}
             </div>
             <div class="col-sm-2 col_dish">
-                <button type="button" class="btn btn-dark mx-auto d-block button_dishCategory" ><a href="">Modifier</a></button>
+                <form method="GET" action="">
+                    <button type="button" class="btn btn-dark mx-auto d-block button_dishCategory">Modifier</button>
+                </form>
             </div>
             <div class="col-sm-3 col_dish">
-                <button type="button" class="btn btn-dark mx-auto d-block button_dishCategory" ><a href="">Supprimer</a></button>
+                <form method="GET" action="">
+                    <button type="button" class="btn btn-dark mx-auto d-block button_dishCategory">Supprimer</button>
+                </form>
             </div>
         </div>
     {% endfor %}
