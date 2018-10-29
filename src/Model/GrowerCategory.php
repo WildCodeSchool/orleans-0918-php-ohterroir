@@ -26,12 +26,15 @@ class GrowerCategory
         return $this->id;
     }
 
+
     /**
      * @param int $id
+     * @return GrowerCategory
      */
-    public function setId(int $id)
+    public function setId(int $id) :GrowerCategory
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -42,12 +45,15 @@ class GrowerCategory
         return $this->nameCategory;
     }
 
+
     /**
      * @param string $nameCategory
+     * @return GrowerCategory
      */
-    public function setNameCategory(string $nameCategory)
+    public function setNameCategory(string $nameCategory) :GrowerCategory
     {
         $this->nameCategory = $nameCategory;
+        return $this;
     }
 
 }
