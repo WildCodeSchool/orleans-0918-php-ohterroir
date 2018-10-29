@@ -241,3 +241,30 @@ footer li a:hover {
     text-decoration: none;
     color: #7fb401;
 }
+
+/* section menu carte */
+.accordion img {
+    border: 10px solid white;
+}
+
+.dish_name-description {
+    font-size: 1.2em;
+}
+
+.plus-minus-button > button:before {
+    content:url("../images/minus_sign-circle.png");
+    padding-right: 5px;
+}
+.plus-minus-button > button.collapsed:before {
+    content:url("../images/plus_sign-circle.png");
+}
+
+.dishes-list {
+    color: #FFFFFF;
+    background-color: #7fb401;
+    font-size: 1.1em;
+}
+
+
+
+
