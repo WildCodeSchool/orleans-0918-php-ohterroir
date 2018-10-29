@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use Model\SpecialOfferManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 use Model\DishCategoryManager;
@@ -19,6 +20,9 @@ class HomeController extends AbstractController
       
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
         $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActive();
+          
+        $specialOffersManager = new SpecialOfferManager($this->getPdo());
+        $specialOffers = $specialOffersManager->getSpecialOffers();
 
         $opinionsTripAdvisorManager = new OpinionTripAdvisorManager($this->getPdo());
         $opinionsTripAdvisor = $opinionsTripAdvisorManager->selectAll();
@@ -29,6 +33,7 @@ class HomeController extends AbstractController
             "schedules" => $schedules,
             "dishCategories" => $dishCategories,
             "opinionsTripAdvisor" => $opinionsTripAdvisor,
+            "specialoffers" => $specialOffers,
         ]);
     }
 }
