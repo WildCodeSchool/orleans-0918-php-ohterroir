@@ -17,6 +17,7 @@ $routes = [
         ['show', '/admin', 'GET'],
     ],
     'ContactDetails' => [
+        ['show', '/admin/contact-details', 'GET'],
         ['edit', '/admin/contact-details/edit/{id:\d+}', ['GET','POST']],
     ],
     'Dishes' => [ // Controller
