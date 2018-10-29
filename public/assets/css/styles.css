@@ -306,3 +306,22 @@ footer a img{
         width: 22.8125rem;
     }
 }
+/* Admin_catégories plats*/
+.button_dishCategory a {
+    color : white;
+}
+.button_dishCategory_add {
+    margin-bottom: 5vh;
+}
+.button_dishCategory a:hover {
+    color : #7fb401;
+    text-decoration: none;
+}
+.dishCategory {
+    margin-top: 1vh;
+}
+@media (max-width: 768px) {
+    .col_dish {
+        margin-bottom: 3vh;
+    }
+}
