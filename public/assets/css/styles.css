@@ -266,3 +266,9 @@ footer address a:hover {
         width: 22.8125rem;
     }
 }
+
+h2 {
+    padding-left: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
