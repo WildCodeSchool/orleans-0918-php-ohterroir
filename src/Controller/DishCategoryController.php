@@ -55,9 +55,10 @@ class DishCategoryController extends AbstractController
         }
         return $this->twig->render('Admin/addDishCategory.html.twig');
     }
-    public function index(){
+    public function index()
+    {
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
         $dishCategories = $dishCategoryManager->selectAll();
-        return $this->twig->render('Admin/dishCategory.html.twig',['dishCategories' => $dishCategories]);
+        return $this->twig->render('Admin/dishCategory.html.twig', ['dishCategories' => $dishCategories]);
     }
 }
