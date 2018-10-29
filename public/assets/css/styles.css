@@ -307,13 +307,13 @@ footer a img{
     }
 }
 /* Admin_catégories plats*/
-.button_dishCategory a {
+.button_dishCategory {
     color : white;
 }
 .button_dishCategory_add {
     margin-bottom: 5vh;
 }
-.button_dishCategory a:hover {
+.button_dishCategory:hover {
     color : #7fb401;
     text-decoration: none;
 }
