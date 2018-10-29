@@ -23,7 +23,10 @@ $routes = [
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
     ],
-    'Grower' =>[
+    'DishCategory' => [ // Controller
+        ['add', '/admin/categorie-plats/ajouter', ['GET','POST']],
+    ], 
+    'Grower' => [
         ['show', '/grower', 'GET'],
     ],
 ];
