@@ -8,12 +8,18 @@
 
 namespace Controller;
 
+use Model\GrowerCategoryManager;
+
 class GrowerController extends AbstractController
 {
     public function show()
     {
-        return $this->twig->render('Grower/growerPage.html.twig',[
+        $growerCategoryManager = new GrowerCategoryManager($this->getPdo());
+        $growerCategories = $growerCategoryManager->selectAll();
+
+        return $this->twig->render('Grower/show.html.twig',[
             "growerPage" => "active",
+            "growerCategories" => $growerCategories,
         ]);
     }
 }
