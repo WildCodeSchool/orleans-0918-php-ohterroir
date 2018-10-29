@@ -46,7 +46,7 @@ class DishCategoryController extends AbstractController
                 $dishCategory->setNamePageDish($cleanPost['namePageDish']);
                 $dishCategory->setDescription($cleanPost['description']);
                 $dishCategory->setComplementaryInformation($cleanPost['complementaryInformation']);
-                $dishCategory->setIsActive($_POST['isActive']);
+                $dishCategory->setIsActive(false);
                 $id = $dishCategoryManager->insert($dishCategory);
 
                 header('Location:/admin/categorie-plats/ajouter');
