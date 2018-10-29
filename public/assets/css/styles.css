@@ -157,6 +157,12 @@ hr {border:1px dashed #7fb401;width:50%;}
     }
 }
 
+/* form grower */
+form legend {
+    font-size: inherit;
+    font-weight: 600;
+}
+
 /* contact_details section */
 .contact_details{
     background-color: #7fb401;
