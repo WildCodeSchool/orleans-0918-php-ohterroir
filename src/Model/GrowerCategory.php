@@ -45,7 +45,6 @@ class GrowerCategory
         return $this->nameCategory;
     }
 
-
     /**
      * @param string $nameCategory
      * @return GrowerCategory
@@ -55,5 +54,4 @@ class GrowerCategory
         $this->nameCategory = $nameCategory;
         return $this;
     }
-
 }

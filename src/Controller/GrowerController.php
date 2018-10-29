@@ -17,7 +17,7 @@ class GrowerController extends AbstractController
         $growerCategoryManager = new GrowerCategoryManager($this->getPdo());
         $growerCategories = $growerCategoryManager->selectAll();
 
-        return $this->twig->render('Grower/show.html.twig',[
+        return $this->twig->render('Grower/show.html.twig', [
             "growerPage" => "active",
             "growerCategories" => $growerCategories,
         ]);
