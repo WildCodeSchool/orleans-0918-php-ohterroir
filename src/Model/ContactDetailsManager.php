@@ -20,6 +20,14 @@ class ContactDetailsManager extends AbstractManager
     }
 
     /**
+     * @return ContactDetails
+     */
+    public function selectUniquetEntry() : ContactDetails
+    {
+        return $this->pdo->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetch();
+    }
+
+    /**
      * @param ContactDetails $contactDetails
      */
     public function update(ContactDetails $contactDetails)

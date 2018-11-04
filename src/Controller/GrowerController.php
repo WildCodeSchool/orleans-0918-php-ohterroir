@@ -10,6 +10,9 @@ namespace Controller;
 
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
+use Swift_SmtpTransport;
+use Swift_Mailer;
+use Swift_Message;
 
 class GrowerController extends AbstractController
 {
@@ -34,7 +37,18 @@ class GrowerController extends AbstractController
 
             $resultCheckForm = $this->checkForm($_POST);
             // envoi mail
-            echo "Envoi email";
+            $sendEmailResult = $this->sendEmail($resultCheckForm['cleanPost']);
+            if ($sendEmailResult === 1) {
+                header("HTTP/1.1 303 See Other");
+                header('Location: /grower?status=validate#formGrower');
+                exit();
+            } else {
+                $resultCheckForm['errors']['global'] = "Une erreur est survenue, merci de ressayer plus tard.";
+            }
+        }
+
+        if (isset($_GET['status']) && $_GET['status'] === 'validate') {
+            $validateForm = "Votre message a bien été envoyé.";
         }
 
         return $this->twig->render('Grower/show.html.twig',[
@@ -43,6 +57,7 @@ class GrowerController extends AbstractController
             "schedules" => $schedules,
             'cleanPost' => $resultCheckForm['cleanPost'],
             'errors' => $resultCheckForm['errors'],
+            'validateForm' => $validateForm
         ]);
     }
 
@@ -85,5 +100,36 @@ class GrowerController extends AbstractController
         }
 
         return ['cleanPost' => $cleanPost, 'errors' => $errors];
+    }
+
+    /**
+     * @param array $emailElements
+     * @return int
+     */
+    public function sendEmail(array $emailElements)
+    {
+        $contactManager = new ContactDetailsManager($this->getPdo());
+        $contactDetails = $contactManager->selectUniquetEntry();
+
+        // smtp.ohterroir-orleans.fr ?
+        $transport = new Swift_SmtpTransport('smtp.sfr.fr', 25);
+
+        $mailer = new Swift_Mailer($transport);
+
+        $emailFrom = $emailElements['company'] . ' - ' . $emailElements['name'];
+        $userMessage = $emailElements['company'] . "\r\n";
+        $userMessage .= $emailElements['name'] . "\r\n";
+        $userMessage .= 'Téléphone : ' . $emailElements['phonenumber'] . "\r\n";
+        $userMessage .= 'Email : ' . $emailElements['email'] . "\r\n";
+        $userMessage .= 'Produit(s) proposé(s) : ' . $emailElements['products'] . "\r\n";
+        $userMessage .= ' ------ ' . "\r\n";
+        $userMessage .= $emailElements['message'] . "\r\n";
+
+        $message = new Swift_Message('OH TERROIR - Demande de partenariat');
+        $message->setFrom([htmlentities($emailElements['email']) => htmlentities($emailFrom)]);
+        $message->setTo([$contactDetails->getEmailAddress() => "Oh Terroir"]);
+        $message->setBody(htmlspecialchars($userMessage, ENT_NOQUOTES, 'UTF-8'));
+
+        return $mailer->send($message);
     }
 }
