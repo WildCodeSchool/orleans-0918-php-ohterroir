@@ -34,7 +34,6 @@ class GrowerController extends AbstractController
         $schedules = $scheduleManager->selectSchedule();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
             $resultCheckForm = $this->checkForm($_POST);
             // envoi mail
             $sendEmailResult = $this->sendEmail($resultCheckForm['cleanPost']);
@@ -51,7 +50,7 @@ class GrowerController extends AbstractController
             $validateForm = "Votre message a bien été envoyé.";
         }
 
-        return $this->twig->render('Grower/show.html.twig',[
+        return $this->twig->render('Grower/show.html.twig', [
             "growerPage" => "active",
             "contacts" => $contacts,
             "schedules" => $schedules,
