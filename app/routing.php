@@ -20,6 +20,6 @@ $routes = [
         ['show', '/dishes', 'GET'], // action, url, method
     ],
     'Grower' =>[
-        ['show', '/grower', ['GET','POST']],
+        ['show', '/grower', 'GET'],
     ],
 ];
