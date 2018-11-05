@@ -41,11 +41,13 @@ class DishCategoryManager extends AbstractManager
         `urlPictureForPageHome`,
         `urlPictureForPageDish`,
         `isActive`) 
-        VALUES (:namePageHome, :namePageDish, :description, :complementaryInformation, :urlPictureForPageHome, :urlPictureForPageDish,:isActive)");
+        VALUES (:namePageHome, :namePageDish, :description, :complementaryInformation, :urlPictureForPageHome, 
+        :urlPictureForPageDish,:isActive)");
         $statement->bindValue(':namePageHome', $dishCategory->getNamePageHome(), \PDO::PARAM_STR);
         $statement->bindValue(':namePageDish', $dishCategory->getNamePageDish(), \PDO::PARAM_STR);
         $statement->bindValue(':description', $dishCategory->getDescription(), \PDO::PARAM_STR);
-        $statement->bindValue(':complementaryInformation', $dishCategory->getComplementaryInformation(), \PDO::PARAM_STR);
+        $statement->bindValue(':complementaryInformation', $dishCategory->getComplementaryInformation(),
+                              \PDO::PARAM_STR);
         $statement->bindValue(':urlPictureForPageHome', '', \PDO::PARAM_STR);
         $statement->bindValue(':urlPictureForPageDish', '', \PDO::PARAM_STR);
         $statement->bindValue(':isActive', false, \PDO::PARAM_BOOL);
