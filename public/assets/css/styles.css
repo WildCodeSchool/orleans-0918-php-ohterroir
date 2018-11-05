@@ -113,8 +113,6 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
-<<<<<<< HEAD
-=======
 
 /* special_offers section */
 
@@ -122,7 +120,6 @@ div.container.bg {
     font-size: 1.2em;
 }
 
->>>>>>> 10f648b6d02f9b43d24ccddcf400585229488a50
 /* back-end */
 .container-admin {
     background-color: #FFF;
@@ -310,7 +307,6 @@ footer a img{
     }
 }
 
-<<<<<<< HEAD
 /* Grower Page*/
 .btn-link:hover {
     color: #7fb401;
@@ -323,7 +319,26 @@ footer a img{
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
-=======
+}
+.growerPicture {
+    height: 80px;
+    width: 80px;
+}
+
+.growerCard {
+    padding: 0.2%;
+    margin-bottom: 0.5%;
+}
+
+.card {
+    height: 100%;
+}
+
+.cardTitleGrower {
+    text-align: center;
+    padding-top: 0.75%;
+}
+
 /* section dishes menu*/
 .accordion img {
     border: 10px solid white;
@@ -349,5 +364,4 @@ footer a img{
 
 .drinks_sentence {
     font-size: 1.1em;
->>>>>>> 10f648b6d02f9b43d24ccddcf400585229488a50
 }
