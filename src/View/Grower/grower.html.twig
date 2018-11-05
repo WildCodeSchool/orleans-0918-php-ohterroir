@@ -12,13 +12,13 @@
                             <p class="card-text">{{ grower.description }}</p>
                             <p class="card-text">{{ grower.localisation }}</p>
                         </div>
-                        {% if grower.siteInternet != NULL %}
-                            <div class="text-center mx-auto">
-                                <a class="btn btn-outline-success" href="{{ grower.siteInternet }}">Cliquer
-                                    ici pour plus d'information</a>
-                            </div>
-                        {% endif %}
                     </div>
+                    {% if grower.siteInternet != NULL %}
+                        <div class="text-center mx-auto">
+                            <a class="btnGrower btn btn-outline-success" href="{{ grower.siteInternet }}">Cliquer
+                                ici pour plus d'information</a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         {% endif %}

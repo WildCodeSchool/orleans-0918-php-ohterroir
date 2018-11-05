@@ -320,14 +320,22 @@ footer a img{
     background-color: transparent;
     border-color: transparent;
 }
+
+.cardBodyGrowerCategory{
+    background-color: rgba(127, 180, 1, 0.25) ;
+}
+
 .growerPicture {
     height: 80px;
     width: 80px;
 }
 
 .growerCard {
-    padding: 0.2%;
+    padding: 1%;
     margin-bottom: 0.5%;
+}
+.btnGrower{
+    margin-bottom: 2%;
 }
 
 .card {
