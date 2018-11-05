@@ -113,6 +113,13 @@ div.container.bg {
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
 }
+
+/* special_offers section */
+
+.special_offers p{
+    font-size: 1.2em;
+}
+
 /* back-end */
 .container-admin {
     background-color: #FFF;
@@ -159,6 +166,18 @@ hr {border:1px dashed #7fb401;width:50%;}
         transform: skewX(0deg);
         width: 100%;
     }
+}
+
+/* carousel TripAdvisor*/
+.slideOpinionsTripAdvisor .carousel-inner .carousel-item{
+    height: 12rem;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 /* contact_details section */
@@ -213,11 +232,25 @@ h2 {
 }
 
 /* footer */
+footer h3{
+    font-family: "PT Serif", serif;
+    color: #7fb401;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+footer h4{
+    font-family: "PT Serif", serif;
+  color: #7fb401;
+}
+
 footer img {
     height: 18.75rem;
     width: 28.125rem;
     padding-left: 0.625rem;
 }
+
 footer {
     background-color: #222222;
 }
@@ -234,7 +267,6 @@ footer li a {
     font-family: "PT Serif", serif;
     font-size: 1.3rem;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #fff;
 }
@@ -251,6 +283,7 @@ footer li a:hover {
     text-decoration: none;
     color: #7fb401;
 }
+
 footer #coordonnees {
     font-family: "PT Serif", serif;
     color: white;
@@ -260,6 +293,10 @@ footer address a {
 }
 footer address a:hover {
     color: #7fb401;
+}
+footer a img{
+    height: 6.25rem;
+    width: 6.25rem;
 }
 @media screen and (max-width: 375px)
 {
@@ -282,4 +319,51 @@ footer address a:hover {
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
+}
+
+/* Admin_catégories plats*/
+.button_dishCategory {
+    color : white;
+}
+.button_dishCategory_add {
+    margin-bottom: 5vh;
+}
+.button_dishCategory:hover {
+    color : #7fb401;
+    text-decoration: none;
+}
+.dishCategory {
+    margin-top: 1vh;
+}
+@media (max-width: 768px) {
+    .col_dish {
+        margin-bottom: 3vh;
+    }
+}
+
+/* section dishes menu*/
+.accordion img {
+    border: 10px solid white;
+}
+
+.dish_name-description {
+    font-size: 1.2em;
+}
+
+.plus-minus-button > button:before {
+    content:url("../images/minus_sign-circle.png");
+    padding-right: 5px;
+}
+.plus-minus-button > button.collapsed:before {
+    content:url("../images/plus_sign-circle.png");
+}
+
+.dishes-list {
+    color: #FFFFFF;
+    background-color: #7fb401;
+    font-size: 1.1em;
+}
+
+.drinks_sentence {
+    font-size: 1.1em;
 }

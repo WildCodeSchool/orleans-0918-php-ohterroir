@@ -2,7 +2,7 @@
 namespace Model;
 
 /**
- * 
+ *
  */
 class ContactDetailsManager extends AbstractManager
 {
@@ -17,6 +17,14 @@ class ContactDetailsManager extends AbstractManager
     public function __construct(\PDO $pdo)
     {
         parent::__construct(self::TABLE, $pdo);
+    }
+
+    /**
+     * @return ContactDetails
+     */
+    public function selectUniquetEntry() : ContactDetails
+    {
+        return $this->pdo->query('SELECT * FROM ' . $this->table, \PDO::FETCH_CLASS, $this->className)->fetch();
     }
 
     /**
