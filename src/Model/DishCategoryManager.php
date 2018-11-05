@@ -20,13 +20,18 @@ class DishCategoryManager extends AbstractManager
     /**
      * Return the active dish categories
      */
-    public function selectAllDishCategoriesIsActive(): array
+    public function selectAllDishCategoriesIsActiveWithMinPrice(): array
     {
-        return $this->pdo->query(
-            'SELECT * FROM ' . $this->table . ' WHERE isActive',
-            \PDO::FETCH_CLASS,
-            $this->className
-        )->fetchAll();
+        $query = 'SELECT dc.*, MIN(d.price) AS minPrice '
+                 .'FROM ' . $this->table . ' dc '
+                 .'JOIN dishSubcategory dsc ON dsc.dishCategoryId = dc.id '
+                 .'JOIN dish d ON d.dishSubcategoryId = dsc.id '
+                 .'WHERE dc.isActive '
+                 .'GROUP BY dc.id '
+                 .'ORDER BY dc.namePageHome';
+        $results = $this->pdo->query($query, \PDO::FETCH_ASSOC)->fetchAll();
+
+        return $results;
     }
 
     public function insert(DishCategory $dishCategory)

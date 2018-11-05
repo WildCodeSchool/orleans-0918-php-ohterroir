@@ -19,7 +19,7 @@ class HomeController extends AbstractController
         $schedules = $scheduleManager->selectSchedule();
       
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
-        $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActive();
+        $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActiveWithMinPrice();
           
         $specialOffersManager = new SpecialOfferManager($this->getPdo());
         $specialOffers = $specialOffersManager->getSpecialOffers();
