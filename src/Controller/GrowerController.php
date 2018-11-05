@@ -9,7 +9,8 @@
 namespace Controller;
 
 use Model\GrowerCategoryManager;
-
+use Model\ContactDetailsManager;
+use Model\ScheduleManager;
 
 class GrowerController extends AbstractController
 {
@@ -18,9 +19,17 @@ class GrowerController extends AbstractController
 
         $growerCategoryManager = new GrowerCategoryManager($this->getPdo());
         $growerCategories = $growerCategoryManager->selectAll();
+        
+        $contactManager = new ContactDetailsManager($this->getPdo());
+        $contacts = $contactManager->selectAll();
+
+        $scheduleManager = new ScheduleManager($this->getPdo());
+        $schedules = $scheduleManager->selectSchedule();
 
         return $this->twig->render('Grower/show.html.twig', [
             "growerPage" => "active",
+            "contacts" => $contacts,
+            "schedules" => $schedules,
             "growerCategories" => $growerCategories,
 
         ]);
