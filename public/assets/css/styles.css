@@ -100,8 +100,9 @@ nav.navbar.shrink .nav-link {
 /* sentence_concept Section */
 h1 {
     font-family: "Dancing Script", cursive !important;
-    font-size: calc(2.6vw + 6pt);
+    font-size: calc(2vw + 18pt);
     padding-bottom: 1em;
+    margin-top: 1em;
 }
 
 div.container.bg {
@@ -125,10 +126,10 @@ div.container.bg {
 }
 
 /* dishes section */
-.dishes_concept {
-    font-size: calc(0.77vw + 6pt);
+.dishes_concept, .grower_concept {
+    font-size: calc(0.70vw + 11pt);
     color: black;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .concept_food {
@@ -226,9 +227,8 @@ hr {border:1px dashed #7fb401;width:50%;}
 .category-home .name:hover span {display: none;}
 
 h2 {
-    font-family: "Dancing Script", cursive !important;
+    font-family: "Dancing Script", cursive;
     font-size: calc(1.5vw + 14pt);
-    padding-bottom: 1em;
 }
 
 /* footer */
@@ -305,6 +305,20 @@ footer a img{
         height: 15.625rem;
         width: 22.8125rem;
     }
+}
+
+/* Grower Page*/
+.btn-link:hover {
+    color: #7fb401;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-link {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 /* Admin_catégories plats*/
