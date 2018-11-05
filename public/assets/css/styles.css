@@ -307,6 +307,26 @@ footer a img{
     }
 }
 
+/* Admin_catégories plats*/
+.button_dishCategory {
+    color : white;
+}
+.button_dishCategory_add {
+    margin-bottom: 5vh;
+}
+.button_dishCategory:hover {
+    color : #7fb401;
+    text-decoration: none;
+}
+.dishCategory {
+    margin-top: 1vh;
+}
+@media (max-width: 768px) {
+    .col_dish {
+        margin-bottom: 3vh;
+    }
+}
+
 /* section dishes menu*/
 .accordion img {
     border: 10px solid white;
