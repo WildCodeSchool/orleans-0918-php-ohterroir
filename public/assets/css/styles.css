@@ -186,8 +186,14 @@ hr {border:1px dashed #7fb401;width:50%;}
 }
 
 /* carousel TripAdvisor*/
-.slideOpinionsTripAdvisor .carousel-inner .carousel-item{
-    height: 12rem;
+.slideOpinionsTripAdvisor h3 {
+    font-size: calc(0.3vw + 15pt);
+
+}
+.slideOpinionsTripAdvisor .carousel-inner .carousel-item .comment {
+    font-size:calc(0.3vw + 13pt);
+    width: 80%;
+    margin: auto;
 }
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
