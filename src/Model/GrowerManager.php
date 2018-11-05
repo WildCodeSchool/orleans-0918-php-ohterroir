@@ -22,5 +22,4 @@ class GrowerManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
-
 }
