@@ -1,25 +1,25 @@
-<div class="row text-center contact_details mt-4">
+<style type="text/css">
+    address {
+        font-size: 1.2em;
+        margin:auto;
+        margin-bottom: 0;
+    }
+    address a {
+        color:#FFF;
+    }
+</style>
+<div class="row text-center contact_details mt-4 ">
     <div class="col-lg-4 align-self-center">
-        <table class="table table-sm table-borderless">
-            <tbody>
-                    {% for contact in contacts %}
-                        <tr>
-                            <td>Adresse : {{ contact.address }}</td>
-                        </tr>
-                        <tr>
-                            <td>{{ contact.zipcode }} - {{ contact.city }}</td>
-                        </tr>
-                        <tr>
-                            <td>Téléphone : {{ contact.phonenumber }}</td>
-                        </tr>
-            {% endfor %}
-                </tbody>
-        </table>
+        <address class="">
+            {{ contact.address }}<br/>
+            {{ contact.zipcode }} {{ contact.city }}<br/>
+            <a href="tel:{{ contact.phonenumber }}">{{ contact.getPhoneNumberFormated }}</a>
+        </address>
     </div>
     <div class="col-lg-4 align-self-center">
         <img class="img-fluid" src="/assets/images/label_AB.jpg" alt="label bio">
     </div>
-    <div class="col-lg-4 align-self-center">
+<!--    <div class="col-lg-4 align-self-center">
         <table class="table table-sm table-borderless">
             <tbody>
             <tr>
@@ -37,5 +37,5 @@
             {% endfor %}
             </tbody>
         </table>
-    </div>
+    </div>-->
 </div>

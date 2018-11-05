@@ -13,7 +13,7 @@ class HomeController extends AbstractController
     public function show()
     {
         $contactManager = new ContactDetailsManager($this->getPdo());
-        $contacts = $contactManager->selectAll();
+        $contact = $contactManager->selectUniquetEntry();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
         $schedules = $scheduleManager->selectSchedule();
@@ -29,7 +29,7 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/home.html.twig', [
             "home" => "active",
-            "contacts" => $contacts,
+            "contact" => $contact,
             "schedules" => $schedules,
             "dishCategories" => $dishCategories,
             "opinionsTripAdvisor" => $opinionsTripAdvisor,
