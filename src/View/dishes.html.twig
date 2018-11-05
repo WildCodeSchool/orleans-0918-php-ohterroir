@@ -24,7 +24,24 @@
                 </div>
             <div id="collapse{{ dishCategory.id }}" class="collapse dishes-list" aria-labelledby="heading{{ dishCategory.id }}" data-parent="#accordion">
                 <div class="card-body">
-                    <div class="row ml-0">
+                        {% for dish in dishes %}
+                            {% if dish.dishSubcategoryId == dishCategory.id %}
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p><big>{{ dish.name }}</big></p>
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <span class="dish_price">{{ dish.price|number_format(2, '.', ',') }}&euro;</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col pb-3">
+                                    <p>{{ dish.composition }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    <div class="row ml-0 pt-3">
                         <p>{{ dishCategory.complementaryInformation }}</p>
                     </div>
                 </div>
