@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use Model\DishCategoryManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 
@@ -10,6 +11,9 @@ class DishesController extends AbstractController
 
     public function show()
     {
+        $dishCategoryManager = new DishCategoryManager($this->getPdo());
+        $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActive();
+
         $contactManager = new ContactDetailsManager($this->getPdo());
         $contacts = $contactManager->selectAll();
 
@@ -20,6 +24,7 @@ class DishesController extends AbstractController
             "dishPage" => "active",
             "contacts" => $contacts,
             "schedules" => $schedules,
+            "dishCategories" => $dishCategories,
         ]);
     }
 }
