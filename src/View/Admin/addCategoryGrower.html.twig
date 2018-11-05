@@ -1,0 +1,32 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}
+    Ajout de catégories de producteurs - {{ parent() }}
+{% endblock %}
+
+{%  block page_title %}
+    Ajout de catégories de producteurs
+{%  endblock %}
+
+{% block content %}
+<div class="row categoryGrower">
+    <div class="col-lg-6 col-sm-12 border pr-lg-2 mx-auto">
+        <form action="/admin/categorie-producteurs/ajouter" method="post">
+            <fieldset>
+                <legend>Ajouter des catégories de producteurs</legend>
+                <div class="form-group row">
+                    <label for="categoryGrowerName" class="col-sm-3 col-form-label">Nom</label>
+                    <div class="col-sm-9">
+                        <input type="text" value="{{ categoryGrower.categoryGrowerName }}" name="categoryGrowerName" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-dark" value="Valider">Ajouter</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock %}

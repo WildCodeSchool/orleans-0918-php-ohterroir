@@ -29,4 +29,7 @@ $routes = [
     'Grower' => [
         ['show', '/grower', 'GET'],
     ],
+    'CategoryGrower' => [ // Controller
+        ['add', '/admin/categorie-producteurs/ajouter', ['GET','POST']],
+    ],
 ];
