@@ -1,0 +1,26 @@
+<div class="row card-deck">
+    {% for grower in growers %}
+        {% if grower.growerCategoriesId == growerCategory.id %}
+            <div class="col-4 growerCard">
+                <div class="card">
+                    <h5 class="cardTitleGrower card-title">{{ grower.name }}</h5>
+                    <div class="row card-body">
+                        <div class="col-4">
+                            <img class="growerPicture" src="{{ grower.picture }}" alt="{{ grower.name }}">
+                        </div>
+                        <div class="col-8">
+                            <p class="card-text">{{ grower.description }}</p>
+                            <p class="card-text">{{ grower.localisation }}</p>
+                        </div>
+                        {% if grower.siteInternet != NULL %}
+                            <div class="text-center mx-auto">
+                                <a class="btn btn-outline-success" href="{{ grower.siteInternet }}">Cliquer
+                                    ici pour plus d'information</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
