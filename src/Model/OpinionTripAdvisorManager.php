@@ -27,5 +27,4 @@ class OpinionTripAdvisorManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
-
 }
