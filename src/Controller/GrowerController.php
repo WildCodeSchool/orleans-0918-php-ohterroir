@@ -8,6 +8,7 @@
 
 namespace Controller;
 
+use Model\GrowerCategoryManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 use Swift_SmtpTransport;
@@ -26,6 +27,9 @@ class GrowerController extends AbstractController
     {
         $resultCheckForm = ['cleanPost' => '', 'errors' => ''];
         $validateForm = '';
+
+        $growerCategoryManager = new GrowerCategoryManager($this->getPdo());
+        $growerCategories = $growerCategoryManager->selectAll();
 
         $contactManager = new ContactDetailsManager($this->getPdo());
         $contacts = $contactManager->selectAll();
@@ -54,9 +58,10 @@ class GrowerController extends AbstractController
             "growerPage" => "active",
             "contacts" => $contacts,
             "schedules" => $schedules,
-            'cleanPost' => $resultCheckForm['cleanPost'],
-            'errors' => $resultCheckForm['errors'],
-            'validateForm' => $validateForm
+            "growerCategories" => $growerCategories,
+            "cleanPost" => $resultCheckForm['cleanPost'],
+            "errors" => $resultCheckForm['errors'],
+            "validateForm" => $validateForm
         ]);
     }
 

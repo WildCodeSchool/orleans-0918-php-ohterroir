@@ -11,6 +11,21 @@ class ContactDetailsController extends AbstractController
      * @throws \Twig_Error_Runtime
      * @throws \Twig_Error_Syntax
      */
+    public function show()
+    {
+        $contactManager = new ContactDetailsManager($this->getPdo());
+        $contactDetails = $contactManager->selectUniquetEntry();
+
+        return $this->twig->render('Admin/contactDetailsShow.html.twig', [
+            'contactDetails' => $contactDetails
+        ]);
+    }
+    /**
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
     public function edit(int $id) : string
     {
         $resultCheckForm = ['cleanPost' => '', 'errors' => ''];

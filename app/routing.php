@@ -16,10 +16,18 @@ $routes = [
     'HomeAdmin' => [
         ['show', '/admin', 'GET'],
     ],
+    'ContactDetails' => [
+        ['show', '/admin/contact-details', 'GET'],
+        ['edit', '/admin/contact-details/edit/{id:\d+}', ['GET','POST']],
+    ],
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
-    ],
-    'Grower' =>[
+    ],  
+    'DishCategory' => [ // Controller
+        ['add', '/admin/categorie-plats/ajouter', ['GET','POST']],
+        ['index', '/admin/categorie-plats', 'GET'], // action, url, method
+    ], 
+    'Grower' => [
         ['show', '/grower', ['GET','POST']],
     ],
 ];
