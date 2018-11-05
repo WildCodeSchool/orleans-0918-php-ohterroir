@@ -22,14 +22,12 @@ $routes = [
     ],
     'Dishes' => [ // Controller
         ['show', '/dishes', 'GET'], // action, url, method
-    ],
-  
+    ],  
     'DishCategory' => [ // Controller
         ['add', '/admin/categorie-plats/ajouter', ['GET','POST']],
         ['index', '/admin/categorie-plats', 'GET'], // action, url, method
-    ],
- 
+    ], 
     'Grower' => [
-        ['show', '/grower', 'GET'],
+        ['show', '/grower', ['GET','POST']],
     ],
 ];
