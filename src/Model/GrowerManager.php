@@ -8,7 +8,6 @@
 
 namespace Model;
 
-
 class GrowerManager extends AbstractManager
 {
     /**
@@ -23,5 +22,4 @@ class GrowerManager extends AbstractManager
     {
         parent::__construct(self::TABLE, $pdo);
     }
-
 }
