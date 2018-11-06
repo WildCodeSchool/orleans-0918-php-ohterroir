@@ -193,7 +193,18 @@ form legend {
     color: #ffffff;
     padding-top: 0.5em;
     box-shadow: 5px 5px 5px 0px rgba(51,51,51,0.4);
+    font-size: 1.2em;
+}
 
+.contact_details address {
+    margin:auto;
+    margin-bottom: 0;
+}
+.contact_details address a {
+    color:#FFF;
+}
+.contact_details img {
+    box-shadow: 5px 5px 5px 0px rgba(51,51,51,0.4);
 }
 
 .contact_details .col-lg-4{

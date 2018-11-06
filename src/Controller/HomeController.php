@@ -16,8 +16,9 @@ class HomeController extends AbstractController
         $contact = $contactManager->selectUniquetEntry();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
-        $schedules = $scheduleManager->selectSchedule();
-      
+        $allSchedules = $scheduleManager->selectSchedule();
+        $schedules = ScheduleController::optimizeDisplayTimeSlots($allSchedules);
+
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
         $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActiveWithMinPrice();
           

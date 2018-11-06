@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `oh_terroir_2018` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `oh_terroir_2018`;
--- MySQL dump 10.13  Distrib 5.7.23, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
 --
 -- Host: localhost    Database: oh_terroir_2018
 -- ------------------------------------------------------
--- Server version	5.7.23-0ubuntu0.18.04.1
+-- Server version	5.7.24-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -40,7 +38,7 @@ CREATE TABLE `schedule` (
 
 LOCK TABLES `schedule` WRITE;
 /*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
-INSERT INTO `schedule` VALUES (1,'11:30','15:00',1),(2,'18:30','22:00',1),(3,'11:30','15:00',2),(4,'18:30','22:00',2),(5,'11:30','15:00',3),(6,'18:30','22:00',3),(7,'11:30','15:00',4),(8,'18:30','22:00',4),(9,'11:30','15:00',5),(10,'18:30','22:30',5),(11,'11:30','22:30',6),(12,'11:30','22:00',7);
+INSERT INTO `schedule` VALUES (1,'11:30','15:00',1),(2,'18:30','22:00',1),(3,'11:30','15:00',2),(4,'18:30','22:00',2),(5,'11:30','15:00',3),(6,'18:30','22:00',3),(7,'11:30','15:00',4),(8,'18:30','22:00',4),(9,'11:30','15:00',5),(10,'18:30','22:30',5),(11,'11:30','22:30',6),(12,'00:00','00:00',7);
 /*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-17 17:45:41
+-- Dump completed on 2018-11-06  9:53:26

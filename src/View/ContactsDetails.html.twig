@@ -1,15 +1,5 @@
-<style type="text/css">
-    address {
-        font-size: 1.2em;
-        margin:auto;
-        margin-bottom: 0;
-    }
-    address a {
-        color:#FFF;
-    }
-</style>
-<div class="row text-center contact_details mt-4 mx-1 ">
-    <div class="col-lg-4 align-self-center">
+<div class="row contact_details mt-3 mx-1 ">
+    <div class="col-lg-4 align-self-center text-center">
         <address class="">
             {{ contact.address }}<br/>
             {{ contact.zipcode }} {{ contact.city }}<br/>
@@ -19,23 +9,29 @@
     <div class="col-lg-4 align-self-center">
         <img class="img-fluid" src="/assets/images/label_AB.jpg" alt="label bio">
     </div>
-<!--    <div class="col-lg-4 align-self-center">
-        <table class="table table-sm table-borderless">
-            <tbody>
-            <tr>
-                {% for i in 0..schedules|length - 1 %}
-                {% if schedules[i].dayname == schedules[i+1].dayname %}
-                <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }} -- {{ schedules[i+1].openinghour1 }} - {{ schedules[i+1].openinghour2 }}</td>
-                {% set i = i+2 %}
-                {% elseif schedules[i].weekdaysid > schedules[i+1].weekdaysid %}
-            <tr>
-                <td>{{ schedules[i-1].dayname }} : {{ schedules[i-1].openinghour1 }} - {{ schedules[i-1].openinghour2 }}</td>
-            </tr>
-            <td>{{ schedules[i].dayname }} : {{ schedules[i].openinghour1 }} - {{ schedules[i].openinghour2 }}</td>
+    <div class="col-lg-4 align-self-center">
+        {% for i in 0..schedules|length - 1 %}
+            <div class="row">
+                <div class="col">
+                    {{ schedules[i].day }}
+                </div>
+                <div class="col">
+                    {% if schedules[i].timeSlot1 == '00:00 - 00:00' %}
+                        Fermé
+                    {% else %}
+                        {{ schedules[i].timeSlot1 }}
+                        {{ schedules[i].timeSlot2 }}
+                    {% endif %}
+                </div>
+
+            </div>
+            {% if loop.last == false %}
+                <div class="row">
+                    <div class="col">
+                        <p class="mx-auto my-1 " style="border-bottom: 1px dotted #FFF;width: 20%;"></p>
+                    </div>
+                </div>
             {% endif %}
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>-->
+        {% endfor %}
+    </div>
 </div>
