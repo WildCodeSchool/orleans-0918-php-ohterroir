@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `oh_terroir_2018` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `oh_terroir_2018`;
 -- MySQL dump 10.13  Distrib 5.7.24, for Linux (x86_64)
 --
 -- Host: localhost    Database: oh_terroir_2018
@@ -40,7 +38,7 @@ CREATE TABLE `dishSubcategory` (
 
 LOCK TABLES `dishSubcategory` WRITE;
 /*!40000 ALTER TABLE `dishSubcategory` DISABLE KEYS */;
-INSERT INTO `dishSubcategory` VALUES (1,'Sauces',1,1),(2,'Steaks',1,1),(3,'Sauces',1,2),(4,'Sauces',1,3),(5,'Sauces',1,4);
+INSERT INTO `dishSubcategory` VALUES (1,'Sauces',1,1),(2,'Steaks',1,1),(3,'Sauces',1,2),(4,'Sauces',1,3),(5,'Desserts',1,4);
 /*!40000 ALTER TABLE `dishSubcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-05 16:38:17
+-- Dump completed on 2018-11-06  9:46:54
