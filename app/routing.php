@@ -32,6 +32,6 @@ $routes = [
         ['show', '/grower', ['GET','POST']],
     ],
     'LegalNotice' => [
-        ['show', '/LegalNotice', ['GET','POST']],
+        ['show', '/LegalNotice', 'GET'],
     ],
 ];
