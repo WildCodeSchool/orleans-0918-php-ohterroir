@@ -134,6 +134,15 @@ class ContactDetails
     }
 
     /**
+     * Formate le téléphone en xx xx xx xx xx
+     * @return string
+     */
+    public function getPhoneNumberFormated() : string
+    {
+        return chunk_split($this->getPhoneNumber(), 2, ' ');
+    }
+
+    /**
      * @return string
      */
     public function getEmailAddress() : string
