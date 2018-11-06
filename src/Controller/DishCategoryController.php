@@ -74,7 +74,7 @@ class DishCategoryController extends AbstractController
         $dishCategorymanager = new DishCategoryManager($this->getPdo());
         $dishCategory = $dishCategorymanager -> selectOneById($id);
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             foreach ($_POST as $key => $value) {
                 $cleanPost[$key] = trim($value);
             }
@@ -96,6 +96,6 @@ class DishCategoryController extends AbstractController
                 exit();
             }
         }
-        return $this->twig->render('Admin/editDishCategory.html.twig',['dishCategory' => $dishCategory]);
+        return $this->twig->render('Admin/editDishCategory.html.twig', ['dishCategory' => $dishCategory]);
     }
 }
