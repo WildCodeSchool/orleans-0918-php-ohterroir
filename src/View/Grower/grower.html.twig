@@ -1,7 +1,7 @@
 <div class="row card-deck">
     {% for grower in growers %}
         {% if grower.growerCategoriesId == growerCategory.id %}
-            <div class="col-4 growerCard">
+            <div class="col-lg-4 col-md-6 col-sm-12 growerCard">
                 <div class="card">
                     <h5 class="cardTitleGrower card-title">{{ grower.name }}</h5>
                     <div class="row card-body">
@@ -14,10 +14,10 @@
                         </div>
                     </div>
                     {% if grower.siteInternet != NULL %}
-                        <div class="text-center mx-auto">
+                        <p class="text-center mx-auto">
                             <a class="btnGrower btn btn-outline-success" href="{{ grower.siteInternet }}">Cliquer
                                 ici pour plus d'information</a>
-                        </div>
+                        </p>
                     {% endif %}
                 </div>
             </div>

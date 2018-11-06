@@ -100,15 +100,12 @@ nav.navbar.shrink .nav-link {
 /* sentence_concept Section */
 h1 {
     font-family: "Dancing Script", cursive !important;
-    font-size: calc(2vw + 18pt);
-    padding-bottom: 1em;
-    margin-top: 1em;
+    font-size: calc(1.2vw + 18pt);
 }
 
 div.container.bg {
     padding-top: 3vh;
-    margin-bottom: 3vh;
-    margin-top: 4vh;
+    margin-bottom: 1.5vh;
     background-color: white;
     box-shadow: 1px 1px 200px black;
     background-image:url(../images/paper.png);
@@ -145,7 +142,7 @@ div.container.bg {
 
 /* dishes section */
 .dishes_concept, .grower_concept {
-    font-size: calc(0.70vw + 11pt);
+    font-size: calc(0.50vw + 11pt);
     line-height: 1.5;
 }
 
@@ -269,9 +266,17 @@ form legend {
 
 .category-home .name:hover span {display: none;}
 
+.category-home-global {
+    font-size : 1.2em;
+}
+.category-home-global span {
+    font-weight: bold;
+    font-size: x-large;
+}
+
 h2 {
     font-family: "Dancing Script", cursive;
-    font-size: calc(1.5vw + 14pt);
+    font-size: calc(1.0vw + 16pt);
 }
 
 /* footer */
@@ -377,6 +382,9 @@ footer a img{
     padding: 1%;
     margin-bottom: 0.5%;
 }
+.growerCard .btn {
+    white-space: normal;
+}
 .btnGrower{
     margin-bottom: 2%;
 }
@@ -415,10 +423,6 @@ footer a img{
     border: 10px solid white;
 }
 
-.dish_name-description {
-    font-size: 1.2em;
-}
-
 .plus-minus-button > button:before {
     content:url("../images/minus_sign-circle.png");
     padding-right: 5px;
@@ -428,8 +432,7 @@ footer a img{
 }
 
 .dishes-list {
-    color: #FFFFFF;
-    background-color: #7fb401;
+    background-color: rgba(127, 180, 1, 0.25); /*#7fb401;*/
     font-size: 1.1em;
 }
 
