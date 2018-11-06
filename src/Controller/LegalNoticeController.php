@@ -21,6 +21,7 @@ class LegalNoticeController extends AbstractController
 
         $scheduleManager = new ScheduleManager($this->getPdo());
         $timeSlotsPerDayAMandPM = $scheduleManager->selectSchedule();
+
         $scheduleService = new ScheduleService();
         $schedules = $scheduleService->optimizeDisplayTimeSlots($timeSlotsPerDayAMandPM);
 
