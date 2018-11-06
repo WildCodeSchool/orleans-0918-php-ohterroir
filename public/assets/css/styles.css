@@ -351,6 +351,32 @@ footer a img{
     border-color: transparent;
 }
 
+.cardBodyGrowerCategory{
+    background-color: rgba(127, 180, 1, 0.25) ;
+}
+
+.growerPicture {
+    height: 80px;
+    width: 80px;
+}
+
+.growerCard {
+    padding: 1%;
+    margin-bottom: 0.5%;
+}
+.btnGrower{
+    margin-bottom: 2%;
+}
+
+.card {
+    height: 100%;
+}
+
+.cardTitleGrower {
+    text-align: center;
+    padding-top: 0.75%;
+}
+
 /* Admin_catégories plats*/
 .button_dishCategory {
     color : white;
