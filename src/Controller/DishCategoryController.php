@@ -90,7 +90,7 @@ class DishCategoryController extends AbstractController
                 $dishCategory->setNamePageDish($cleanPost['namePageDish']);
                 $dishCategory->setDescription($cleanPost['description']);
                 $dishCategory->setComplementaryInformation($cleanPost['complementaryInformation']);
-                $dishCategory->setIsActive(false);
+                $dishCategory->setIsActive($cleanPost['activeCategory']);
                 $dishCategorymanager->update($dishCategory);
                 header('location:/admin/categorie-plats');
                 exit();
