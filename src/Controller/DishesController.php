@@ -5,6 +5,9 @@ namespace Controller;
 use Model\DishCategoryManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
+use Service\ScheduleService;
+use Model\DishManager;
+use Model\DishSubcategoryManager;
 
 class DishesController extends AbstractController
 {
@@ -15,16 +18,22 @@ class DishesController extends AbstractController
         $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActiveWithMinPrice();
 
         $contactManager = new ContactDetailsManager($this->getPdo());
-        $contacts = $contactManager->selectAll();
+        $contact = $contactManager->selectUniquetEntry();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
-        $schedules = $scheduleManager->selectSchedule();
+        $timeSlotsPerDayAMandPM = $scheduleManager->selectSchedule();
+        $scheduleService = new ScheduleService();
+        $schedules = $scheduleService->optimizeDisplayTimeSlots($timeSlotsPerDayAMandPM);
         
+        $dishManager = new DishManager($this->getPdo());
+        $dishes = $dishManager->selectDishes();
+      
         return $this->twig->render('dishes.html.twig', [
             "dishPage" => "active",
-            "contacts" => $contacts,
+            "contact" => $contact,
             "schedules" => $schedules,
             "dishCategories" => $dishCategories,
+            "dishes" => $dishes,
         ]);
     }
 }

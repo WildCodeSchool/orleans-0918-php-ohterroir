@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `schedule`
+-- Table structure for table `dishSubcategory`
 --
 
-DROP TABLE IF EXISTS `schedule`;
+DROP TABLE IF EXISTS `dishSubcategory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `schedule` (
+CREATE TABLE `dishSubcategory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `openingHour1` varchar(5) NOT NULL,
-  `openingHour2` varchar(5) NOT NULL,
-  `weekdaysId` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`weekdaysId`),
-  KEY `fk_opening_time_weekdays_idx` (`weekdaysId`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+  `categoryName` varchar(255) NOT NULL,
+  `isActive` tinyint(1) NOT NULL,
+  `dishCategoryId` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`dishCategoryId`),
+  KEY `fk_dishSubcategory_dishCategory1_idx` (`dishCategoryId`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `schedule`
+-- Dumping data for table `dishSubcategory`
 --
 
-LOCK TABLES `schedule` WRITE;
-/*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
-INSERT INTO `schedule` VALUES (1,'11:30','15:00',1),(2,'18:30','22:00',1),(3,'11:30','15:00',2),(4,'18:30','22:00',2),(5,'11:30','15:00',3),(6,'18:30','22:00',3),(7,'11:30','15:00',4),(8,'18:30','22:00',4),(9,'11:30','15:00',5),(10,'18:30','22:30',5),(11,'11:30','22:30',6),(12,'00:00','00:00',7);
-/*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
+LOCK TABLES `dishSubcategory` WRITE;
+/*!40000 ALTER TABLE `dishSubcategory` DISABLE KEYS */;
+INSERT INTO `dishSubcategory` VALUES (1,'Sauces',1,1),(2,'Steaks',1,1),(3,'Sauces',1,2),(4,'Sauces',1,3),(5,'Desserts',1,4);
+/*!40000 ALTER TABLE `dishSubcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-06  9:53:26
+-- Dump completed on 2018-11-06  9:46:54

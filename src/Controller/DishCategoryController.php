@@ -61,4 +61,41 @@ class DishCategoryController extends AbstractController
         $dishCategories = $dishCategoryManager->selectAll();
         return $this->twig->render('Admin/dishCategory.html.twig', ['dishCategories' => $dishCategories]);
     }
+
+    /**
+     * @param $id
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
+    public function edit($id)
+    {
+        $dishCategorymanager = new DishCategoryManager($this->getPdo());
+        $dishCategory = $dishCategorymanager -> selectOneById($id);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST as $key => $value) {
+                $cleanPost[$key] = trim($value);
+            }
+            $errors = [];
+            if (empty($cleanPost['namePageHome'])) {
+                $errors[] = "La catégorie du plat est obligatoire, merci de la renseigner";
+            }
+            if (empty($cleanPost['namePageDish'])) {
+                $errors[] = "Le nom du plat est obligatoire, merci de le renseigner";
+            }
+            if (empty($errors)) {
+                $dishCategory->setNamePageHome($cleanPost['namePageHome']);
+                $dishCategory->setNamePageDish($cleanPost['namePageDish']);
+                $dishCategory->setDescription($cleanPost['description']);
+                $dishCategory->setComplementaryInformation($cleanPost['complementaryInformation']);
+                $dishCategory->setIsActive(false);
+                $dishCategorymanager->update($dishCategory);
+                header('location:/admin/categorie-plats');
+                exit();
+            }
+        }
+        return $this->twig->render('Admin/editDishCategory.html.twig', ['dishCategory' => $dishCategory]);
+    }
 }

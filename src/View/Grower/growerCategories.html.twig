@@ -18,8 +18,8 @@
     <div id="collapse{{ growerCategory.id }}" class="collapse" aria-labelledby="heading{{ growerCategory.id }}"
          data-parent="#accordion">
     {% endif %}
-        <div class="card-body">
-            <!-- TO DO : card grower US-32 -->
+        <div class="cardBodyGrowerCategory card-body">
+            {% include 'Grower/grower.html.twig' %}
         </div>
     </div>
     {% endfor %}
