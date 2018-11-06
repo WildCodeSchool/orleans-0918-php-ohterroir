@@ -101,8 +101,6 @@ nav.navbar.shrink .nav-link {
 h1 {
     font-family: "Dancing Script", cursive !important;
     font-size: calc(1.2vw + 18pt);
-    /*padding-bottom: 1em;
-    margin-top: 1em;*/
 }
 
 div.container.bg {
