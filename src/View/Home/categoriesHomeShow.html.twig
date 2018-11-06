@@ -10,8 +10,8 @@
                 <p><a href="dishes#heading{{ dishCategory.id }}" class="name" ><span>{{ dishCategory.namePageHome }}</span></a></p>
                 <p><img src="{{ dishCategory.urlPictureForPageHome }}" alt="" class="img-thumbnail img-fluid" ></p>
             </div>
-            <p class="my-4 text-center font-weight-bold">
-                A partir de <span class="concept"><big>{{ dishCategory.minPrice|number_format(2, '.', ',') }}&euro;</big></span>
+            <p class="category-home-global my-4 text-center">
+                A partir de <span class="concept">{{ dishCategory.minPrice|number_format(2, '.', ',') }}&euro;</span>
             </p>
         </div>
     {% endfor %}
