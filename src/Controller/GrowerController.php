@@ -37,7 +37,7 @@ class GrowerController extends AbstractController
         $growerCategories = $growerCategoryManager->selectAll();
 
         $contactManager = new ContactDetailsManager($this->getPdo());
-        $contacts = $contactManager->selectAll();
+        $contact = $contactManager->selectUniquetEntry();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
         $timeSlotsPerDayAMandPM = $scheduleManager->selectSchedule();
@@ -63,7 +63,7 @@ class GrowerController extends AbstractController
 
         return $this->twig->render('Grower/show.html.twig', [
             "growerPage" => "active",
-            "contacts" => $contacts,
+            "contact" => $contact,
             "schedules" => $schedules,
             "growerCategories" => $growerCategories,
             "cleanPost" => $resultCheckForm['cleanPost'],
