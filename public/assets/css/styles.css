@@ -146,7 +146,6 @@ div.container.bg {
 /* dishes section */
 .dishes_concept, .grower_concept {
     font-size: calc(0.70vw + 11pt);
-    color: black;
     line-height: 1.5;
 }
 
