@@ -8,7 +8,7 @@ class ScheduleController
      * Regroupe les plages horaires identiques pour l'affichage
      * Mis dans le abstract car appel dans différents controllers
      */
-    public static function optimizeDisplayTimeSlots(array $allSchedules) : array
+    public static function optimizeDisplayTimeSlots(array $allSchedules): array
     {
         $timeSlotsPerDayAMandPM = [];
 
@@ -20,14 +20,14 @@ class ScheduleController
 
         $timeSlotsPerDay = [];
         for ($i = 0; $i < count($timeSlotsPerDayAMandPM); $i++) {
-            if (isset($timeSlotsPerDayAMandPM[$i+1]['day'])
-                && $timeSlotsPerDayAMandPM[$i]['day'] == $timeSlotsPerDayAMandPM[$i+1]['day']) {
+            if (isset($timeSlotsPerDayAMandPM[$i + 1]['day'])
+                && $timeSlotsPerDayAMandPM[$i]['day'] == $timeSlotsPerDayAMandPM[$i + 1]['day']) {
                 $timeSlotsPerDay[] = [
                     'day' => $timeSlotsPerDayAMandPM[$i]['day'],
                     'timeSlot1' => $timeSlotsPerDayAMandPM[$i]['timeSlot'],
-                    'timeSlot2' => $timeSlotsPerDayAMandPM[$i+1]['timeSlot']
+                    'timeSlot2' => $timeSlotsPerDayAMandPM[$i + 1]['timeSlot']
                 ];
-            } elseif ($timeSlotsPerDayAMandPM[$i]['day'] != $timeSlotsPerDayAMandPM[$i-1]['day']) {
+            } elseif ($timeSlotsPerDayAMandPM[$i]['day'] != $timeSlotsPerDayAMandPM[$i - 1]['day']) {
                 $timeSlotsPerDay[] = [
                     'day' => $timeSlotsPerDayAMandPM[$i]['day'],
                     'timeSlot1' => $timeSlotsPerDayAMandPM[$i]['timeSlot'],
@@ -42,7 +42,7 @@ class ScheduleController
             for ($i = 0; $i < count($timeSlotsGroupByDay); $i++) {
                 if ($timeSlotsGroupByDay[$i]['timeSlot1'] == $timeSlot['timeSlot1'] &&
                     $timeSlotsGroupByDay[$i]['timeSlot2'] == $timeSlot['timeSlot2']) {
-                    $timeSlotsGroupByDay[$i]['day'] .= ' / ' .$timeSlot['day'];
+                    $timeSlotsGroupByDay[$i]['day'] .= ' / ' . $timeSlot['day'];
                     $searchTimeSlot = true;
                     break;
                 }
@@ -58,4 +58,4 @@ class ScheduleController
 
         return $timeSlotsGroupByDay;
     }
- }
+}

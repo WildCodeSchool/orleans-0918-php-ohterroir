@@ -139,7 +139,7 @@ class ContactDetails
      */
     public function getPhoneNumberFormated() : string
     {
-        return chunk_split($this->getPhoneNumber(),2, ' ');
+        return chunk_split($this->getPhoneNumber(), 2, ' ');
     }
 
     /**
