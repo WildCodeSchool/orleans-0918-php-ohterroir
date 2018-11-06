@@ -6,12 +6,12 @@
                 <img src="/assets/images/terrasse_footer.jpg" />
             </div>
             <div class="col-sm-4">
-                <iframe src="https://maps.google.com/maps?q={{ contacts.0.address|replace({' ': '+'}) ~ '+' ~ contacts.0.zipcode }}&hl=fr;&amp;output=embed" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://maps.google.com/maps?q={{ contacts.0.address|replace({' ': '+'}) ~ '+' ~ contacts.0.zipcode }}&hl=fr;&amp;output=embed" width="550" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-sm-4">
                 <a href="/dishes">Plats & Desserts</a>
                 <a href="/grower">Partenaires</a>
-                <a href="/legalNotice">Mentions légales</a>
+                <a href="/LegalNotice">Mentions légales</a>
             </div>
         </div>
     </div>
@@ -30,10 +30,10 @@
             <div class="col-sm-4">
                 {% for i in 0..schedules|length - 1 %}
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-5">
                             {{ schedules[i].day }}
                         </div>
-                        <div class="col-5">
+                        <div class="col-7">
                             {% if schedules[i].timeSlot1 == '00:00 - 00:00' %}
                                 Fermé
                             {% else %}
@@ -53,8 +53,8 @@
             </div>
             <div class="col-sm-4">
                 <h4>Suivez-nous</h4>
-                <a href="https://www.facebook.com/OhTerroirFastGood/"><img src="https://www.shareicon.net/download/2015/09/23/106006_logo.svg"></a>
-                <a href="https://www.tripadvisor.fr/Restaurant_Review-g187129-d3686919-Reviews-Oh_Terroir_version_Fast_Good-Orleans_Loiret_Centre_Val_de_Loire.html"><img src="https://png.icons8.com/color/1600/tripadvisor.png"></a>
+                <a href="https://www.facebook.com/OhTerroirFastGood/"><i class="fab fa-facebook-f fa-4x"></i></a>
+                <a href="https://www.tripadvisor.fr/Restaurant_Review-g187129-d3686919-Reviews-Oh_Terroir_version_Fast_Good-Orleans_Loiret_Centre_Val_de_Loire.html"><i class="fab fa-tripadvisor fa-4x"></i></a>
             </div>
         </div>
     </div>

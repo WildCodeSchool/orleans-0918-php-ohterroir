@@ -291,8 +291,8 @@ footer h4{
 }
 
 footer img {
-    height: 18.75rem;
-    width: 28.125rem;
+    height: 25rem;
+    width: 37.5rem;
     margin-right: 1rem;
     padding-left: 2rem;
 }
@@ -307,7 +307,7 @@ footer li{
 
 footer #pages a {
     font-family: "PT Serif", serif;
-    font-size: 1.3rem;
+    font-size: 1.5625rem;
     color: #fff;
 }
 
@@ -328,6 +328,7 @@ footer #pages a:hover {
 footer #coordonnees {
     font-family: "PT Serif", serif;
     color: white;
+    font-size: 1.25rem;
 }
 footer address a {
     color: white;
@@ -335,9 +336,13 @@ footer address a {
 footer address a:hover {
     color: #7fb401;
 }
-footer #coordonnees a img{
-    height: 6.45rem;
-    width: 6.45rem;
+footer .fab {
+    margin-right: 4rem;
+    color: white;
+}
+
+footer .fab:hover {
+    color: #7fb401;
 }
 
 @media screen and (max-width: 375px)
