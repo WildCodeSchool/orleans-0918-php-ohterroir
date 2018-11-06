@@ -14,7 +14,7 @@ class DishesController extends AbstractController
     public function show()
     {
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
-        $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActive();
+        $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActiveWithMinPrice();
 
         $contactManager = new ContactDetailsManager($this->getPdo());
         $contacts = $contactManager->selectAll();
