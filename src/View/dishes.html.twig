@@ -27,10 +27,10 @@
                         {% for dish in dishes %}
                             {% if dish.dishCategoryId == dishCategory.id %}
                                 <div class="row">
-                                    <div class="col-9">
+                                    <div class="col-8">
                                         <p><big>{{ dish.name }}</big></p>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    <div class="col-4 text-right">
                                         <span class="dish_price">{{ dish.price|number_format(2, '.', ',') }}&euro;</span>
                                     </div>
                                 </div>
