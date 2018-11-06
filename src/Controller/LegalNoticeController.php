@@ -12,7 +12,7 @@ use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 use Service\ScheduleService;
 
-class legalNoticeController extends AbstractController
+class LegalNoticeController extends AbstractController
 {
     public function show()
     {
