@@ -5,6 +5,7 @@ namespace Controller;
 use Model\DishCategoryManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
+use Service\ScheduleService;
 
 class DishesController extends AbstractController
 {
@@ -18,7 +19,9 @@ class DishesController extends AbstractController
         $contacts = $contactManager->selectAll();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
-        $schedules = $scheduleManager->selectSchedule();
+        $timeSlotsPerDayAMandPM = $scheduleManager->selectSchedule();
+        $scheduleService = new ScheduleService();
+        $schedules = $scheduleService->optimizeDisplayTimeSlots($timeSlotsPerDayAMandPM);
         
         return $this->twig->render('dishes.html.twig', [
             "dishPage" => "active",

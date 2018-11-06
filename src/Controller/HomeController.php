@@ -7,6 +7,7 @@ use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 use Model\DishCategoryManager;
 use Model\OpinionTripAdvisorManager;
+use Service\ScheduleService;
 
 class HomeController extends AbstractController
 {
@@ -16,8 +17,9 @@ class HomeController extends AbstractController
         $contact = $contactManager->selectUniquetEntry();
 
         $scheduleManager = new ScheduleManager($this->getPdo());
-        $allSchedules = $scheduleManager->selectSchedule();
-        $schedules = ScheduleController::optimizeDisplayTimeSlots($allSchedules);
+        $timeSlotsPerDayAMandPM = $scheduleManager->selectSchedule();
+        $scheduleService = new ScheduleService();
+        $schedules = $scheduleService->optimizeDisplayTimeSlots($timeSlotsPerDayAMandPM);
 
         $dishCategoryManager = new DishCategoryManager($this->getPdo());
         $dishCategories = $dishCategoryManager->selectAllDishCategoriesIsActiveWithMinPrice();

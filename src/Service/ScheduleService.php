@@ -1,13 +1,13 @@
 <?php
 
-namespace Controller;
+namespace Service;
 
-class ScheduleController
+class ScheduleService
 {
     /**
      * Regroupe les plages horaires identiques pour l'affichage
      */
-    public static function optimizeDisplayTimeSlots(array $allSchedules): array
+    public function optimizeDisplayTimeSlots(array $allSchedules): array
     {
         $timeSlotsPerDayAMandPM = [];
 
