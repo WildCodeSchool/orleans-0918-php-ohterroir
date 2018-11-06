@@ -6,7 +6,6 @@ class ScheduleController
 {
     /**
      * Regroupe les plages horaires identiques pour l'affichage
-     * Mis dans le abstract car appel dans différents controllers
      */
     public static function optimizeDisplayTimeSlots(array $allSchedules): array
     {
