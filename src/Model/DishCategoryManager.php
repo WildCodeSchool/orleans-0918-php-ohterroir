@@ -63,4 +63,29 @@ class DishCategoryManager extends AbstractManager
             return $this->pdo->lastInsertId();
         }
     }
+
+    /**
+     * @param DishCategory $dishCategory
+     */
+    public function update(DishCategory $dishCategory)
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET
+                        namePageHome = :namePageHome,
+                        namePageDish = :namePageDish,
+                        description = :description,
+                        complementaryInformation = :complementaryInformation,
+                        urlPictureForPageHome = :urlPictureForPageHome,
+                        urlPictureForPageDish = :urlPictureForPageDish,
+                        isActive = :isActive
+                        WHERE id= :id");
+        $statement->bindValue('id',$dishCategory->getId(), \PDO::PARAM_STR);
+        $statement->bindValue('namePageHome', $dishCategory->getNamePageHome(), \PDO::PARAM_STR);
+        $statement->bindValue('namePageDish', $dishCategory->getNamePageDish(), \PDO::PARAM_STR);
+        $statement->bindValue('description', $dishCategory->getDescription(),\PDO::PARAM_STR);
+        $statement->bindValue('complementaryInformation', $dishCategory->getComplementaryInformation(), \PDO::PARAM_STR);
+        $statement->bindValue('urlPictureForPageHome', '', \PDO::PARAM_STR);
+        $statement->bindValue('urlPictureForPageDish', '', \PDO::PARAM_STR);
+        $statement->bindValue('isActive', '', \PDO::PARAM_BOOL);
+        $statement->execute();
+    }
 }
