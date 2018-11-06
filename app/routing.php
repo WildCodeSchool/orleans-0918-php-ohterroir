@@ -26,6 +26,7 @@ $routes = [
     'DishCategory' => [ // Controller
         ['add', '/admin/categorie-plats/ajouter', ['GET','POST']],
         ['index', '/admin/categorie-plats', 'GET'], // action, url, method
+        ['edit', '/admin/categorie-plats/edit/{id:\d+}', ['GET','POST']],
     ], 
     'Grower' => [
         ['show', '/grower', ['GET','POST']],

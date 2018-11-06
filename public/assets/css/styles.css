@@ -116,7 +116,25 @@ div.container.bg {
 
 /* special_offers section */
 
-.special_offers p{
+.special_offers .card {
+    background-color: transparent;
+    border: none;
+}
+.special_offers .card-header, .special_offers .card-footer {
+    border: 1px solid #7fb401;
+    background-color: rgba(127,180,1,0.6);
+}
+.special_offers .card-body {
+    border-right: 1px solid #7fb401;
+    border-left: 1px solid #7fb401;
+    padding: 0.5rem;
+    background-color: #FFF;
+}
+.special_offers .card-footer {
+    font-size: 10pt;
+}
+
+.special_offers p {
     font-size: 1.2em;
 }
 
@@ -128,7 +146,6 @@ div.container.bg {
 /* dishes section */
 .dishes_concept, .grower_concept {
     font-size: calc(0.70vw + 11pt);
-    color: black;
     line-height: 1.5;
 }
 
@@ -175,8 +192,14 @@ form legend {
 }
 
 /* carousel TripAdvisor*/
-.slideOpinionsTripAdvisor .carousel-inner .carousel-item {
-    height: 12rem;
+.slideOpinionsTripAdvisor h3 {
+    font-size: calc(0.3vw + 15pt);
+
+}
+.slideOpinionsTripAdvisor .carousel-inner .carousel-item .comment {
+    font-size:calc(0.3vw + 13pt);
+    width: 80%;
+    margin: auto;
 }
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%7fb401' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -339,6 +362,32 @@ footer a img{
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
+}
+
+.cardBodyGrowerCategory{
+    background-color: rgba(127, 180, 1, 0.25) ;
+}
+
+.growerPicture {
+    height: 80px;
+    width: 80px;
+}
+
+.growerCard {
+    padding: 1%;
+    margin-bottom: 0.5%;
+}
+.btnGrower{
+    margin-bottom: 2%;
+}
+
+.card {
+    height: 100%;
+}
+
+.cardTitleGrower {
+    text-align: center;
+    padding-top: 0.75%;
 }
 
 /* Admin_catégories plats*/

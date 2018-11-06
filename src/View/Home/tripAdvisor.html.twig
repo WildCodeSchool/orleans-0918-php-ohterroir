@@ -1,15 +1,18 @@
-<div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor" data-ride="carousel">
+<div id="carouselOpinionsTripAdvisor" class="carousel slide slideOpinionsTripAdvisor my-3" data-ride="carousel">
     <div class="carousel-inner">
         {% for opinion in opinionsTripAdvisor %}
             {% if loop.first %}
-            <div class="carousel-item active text-center p-4 ">
+            <div class="carousel-item active text-center p-4">
             {% else %}
-            <div class="carousel-item text-center p-4 ">
+            <div class="carousel-item text-center p-4">
             {% endif %}
                 <div class="d-block">
-                    <p>Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5. Le {{ opinion.DateOpinion|date('d/m/Y') }}.</p>
-                    <h3>{{ opinion.title }}</h3>
-                    <p>{{ opinion.comment }}</p>
+                    <h3 class="concept mb-4">{{ opinion.title }}</h3>
+                    <p class="comment">{{ opinion.comment }}</p>
+                    <p class="mt-4 mb-0">
+                        Evalué par {{ opinion.pseudo }} à {{ opinion.note }}/5.
+                        Le {{ opinion.DateOpinion|date('d/m/Y') }}.
+                    </p>
                 </div>
             </div>
         {% endfor %}
