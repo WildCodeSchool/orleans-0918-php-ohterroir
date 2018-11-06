@@ -6,6 +6,7 @@ use Model\DishCategoryManager;
 use Model\ContactDetailsManager;
 use Model\ScheduleManager;
 use Model\DishManager;
+use Model\DishSubcategoryManager;
 
 class DishesController extends AbstractController
 {
@@ -23,7 +24,7 @@ class DishesController extends AbstractController
 
         $dishManager = new DishManager($this->getPdo());
         $dishes = $dishManager->selectDishes();
-        
+
         return $this->twig->render('dishes.html.twig', [
             "dishPage" => "active",
             "contacts" => $contacts,

@@ -2,7 +2,6 @@
 
 namespace Model;
 
-
 class DishManager extends AbstractManager
 {
     /**
@@ -24,9 +23,10 @@ class DishManager extends AbstractManager
     public function selectDishes() : array
     {
         return $this->pdo->query(
-            'SELECT * FROM ' . $this->table . ' JOIN dishSubcategory ON dishSubcategory.id = dish.dishSubcategoryId JOIN dishCategory ON dishCategory.Id = dishSubcategory.dishCategoryId',
-            \PDO::FETCH_CLASS,
-            $this->className
+            'SELECT * FROM ' . $this->table . ' AS d 
+            JOIN dishSubcategory AS dsc ON dsc.id = d.dishSubcategoryId 
+            JOIN dishCategory AS dc ON dc.id = dsc.dishCategoryId',
+            \PDO::FETCH_ASSOC
         )
             ->fetchAll();
     }
