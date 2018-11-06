@@ -12,7 +12,10 @@
                     <div class="row d-flex align-items-center ml-0">
                         <div class="col-sm-5 dish_name-description">
                             <h2>{{ dishCategory.namePageDish }}</h2>
-                            <p>{{ dishCategory.description }}</p>
+                            <p class="mt-4">{{ dishCategory.description }}</p>
+                            <p class="my-5 text-center font-weight-bold">
+                                A partir de <span class="concept"><big>{{ dishCategory.minPrice|number_format(2, '.', ',') }}&euro;</big></span>
+                            </p>
                         </div>
                         <div class="col-sm-7">
                             <img class="img-fluid" src="{{ dishCategory.urlPictureForPageDish }}" alt="">
@@ -49,8 +52,8 @@
         </div>
     </div>
     {% endfor %}
-    <div class="row mt-2 mb-2 text-center">
-        <div class="col drinks_sentence">
+    <div class="row text-center">
+        <div class="col my-5 drinks_sentence">
             <p>Les boissons comprises dans nos menus sont à volonté.</p>
             <p>Une centrale d'affinage est utilisée pour notre eau, les sirops bio sont fabriqués par la maison Meneau.</p>
         </div>
