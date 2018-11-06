@@ -62,6 +62,13 @@ class DishCategoryController extends AbstractController
         return $this->twig->render('Admin/dishCategory.html.twig', ['dishCategories' => $dishCategories]);
     }
 
+    /**
+     * @param $id
+     * @return string
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
+     */
     public function edit($id)
     {
         $dishCategorymanager = new DishCategoryManager($this->getPdo());
