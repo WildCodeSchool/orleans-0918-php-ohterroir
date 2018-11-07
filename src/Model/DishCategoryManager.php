@@ -74,8 +74,6 @@ class DishCategoryManager extends AbstractManager
                         namePageDish = :namePageDish,
                         description = :description,
                         complementaryInformation = :complementaryInformation,
-                        urlPictureForPageHome = :urlPictureForPageHome,
-                        urlPictureForPageDish = :urlPictureForPageDish,
                         isActive = :isActive
                         WHERE id= :id");
         $statement->bindValue('id', $dishCategory->getId(), \PDO::PARAM_STR);
@@ -87,9 +85,7 @@ class DishCategoryManager extends AbstractManager
             $dishCategory->getComplementaryInformation(),
             \PDO::PARAM_STR
         );
-        $statement->bindValue('urlPictureForPageHome', '', \PDO::PARAM_STR);
-        $statement->bindValue('urlPictureForPageDish', '', \PDO::PARAM_STR);
-        $statement->bindValue('isActive', '', \PDO::PARAM_BOOL);
+        $statement->bindValue('isActive', $dishCategory->isActive(), \PDO::PARAM_BOOL);
         $statement->execute();
     }
 }

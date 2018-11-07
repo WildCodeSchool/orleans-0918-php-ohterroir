@@ -281,53 +281,51 @@ h2 {
 
 /* footer */
 footer h3{
-    font-family: "PT Serif", serif;
+    font-family: "Dancing Script", cursive;
     color: #7fb401;
-    padding-top: 15px;
-    margin-bottom: 20px;
-    padding-left: 10px;
+    padding-top: 0.9375rem;
+    margin-bottom: 1.25rem;
+    padding-left: 2rem;
+    font-size: calc(1.5vw + 20pt);
 }
 
 footer h4{
-    font-family: "PT Serif", serif;
-  color: #7fb401;
+    font-family: "Dancing Script", cursive;
+    color: #7fb401;
+    font-size: calc(1.5vw + 20pt);
 }
 
 footer img {
-    height: 18.75rem;
-    width: 28.125rem;
-    padding-left: 0.625rem;
+    height: 25rem;
+    width: 37.5rem;
+    margin-right: 1rem;
+    padding-left: 2rem;
 }
 
 footer {
     background-color: #222222;
 }
-  
+
 footer li{
     list-style-type: none;
 }
-  
-footer #pages li{
-    margin-bottom: 30px;
-}
-  
-footer li a {
+
+footer #pages a {
     font-family: "PT Serif", serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.2em;
+    font-size: 1.5625rem;
     color: #fff;
 }
-  
-footer li a::after {
+
+footer #pages a:after {
     content: '';
     display: block;
-    width: 50px;
-    height: 2px;
+    width: 3.125rem;
+    height: 0.125rem;
     background: #7fb401;
+    margin-bottom: 0.9375rem;
 }
-  
-footer li a:hover {
+
+footer #pages a:hover {
     text-decoration: none;
     color: #7fb401;
 }
@@ -335,6 +333,7 @@ footer li a:hover {
 footer #coordonnees {
     font-family: "PT Serif", serif;
     color: white;
+    font-size: 1.25rem;
 }
 footer address a {
     color: white;
@@ -342,16 +341,27 @@ footer address a {
 footer address a:hover {
     color: #7fb401;
 }
-footer a img{
-    height: 6.25rem;
-    width: 6.25rem;
+footer .fab {
+    margin-right: 4rem;
+    color: white;
 }
+
+footer .fab:hover {
+    color: #7fb401;
+}
+
 @media screen and (max-width: 375px)
 {
-    footer img {
-        margin-bottom: 1.25rem;
-        height: 15.625rem;
-        width: 22.8125rem;
+    footer #pages {
+        display: none;
+    }
+
+    footer h4 {
+        padding-left: 2rem;
+    }
+
+    footer .btn {
+        margin-bottom: 1rem;
     }
 }
 
