@@ -6,7 +6,7 @@
                 <img src="/assets/images/terrasse_footer.jpg" />
             </div>
             <div class="col-sm-4">
-                <iframe src="https://maps.google.com/maps?q={{ contacts.0.address|replace({' ': '+'}) ~ '+' ~ contacts.0.zipcode }}&hl=fr;&amp;output=embed" width="550" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://maps.google.com/maps?q={{ contact.address|replace({' ': '+'}) ~ '+' ~ contact.zipcode }}&hl=fr;&amp;output=embed" width="550" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-sm-4">
                 <a href="/dishes">Plats & Desserts</a>
@@ -25,7 +25,7 @@
                 </address>
             </div>
             <div class="col text-center d-sm-block d-md-none">
-                <a class="btn btn-success" href="https://maps.google.com/maps?q={{ contacts.0.address|replace({' ': '+'}) ~ '+' ~ contacts.0.zipcode }}">Trouvez-nous</a>
+                <a class="btn btn-success" href="https://maps.google.com/maps?q={{ contact.address|replace({' ': '+'}) ~ '+' ~ contact.zipcode }}">Trouvez-nous</a>
             </div>
             <div class="col-sm-4">
                 {% for i in 0..schedules|length - 1 %}
